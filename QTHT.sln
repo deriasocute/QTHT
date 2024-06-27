@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTHT", "QTHT.csproj", "{B0B524CE-97E0-4399-8149-B0B32C5ADFFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0B524CE-97E0-4399-8149-B0B32C5ADFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B524CE-97E0-4399-8149-B0B32C5ADFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B524CE-97E0-4399-8149-B0B32C5ADFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B524CE-97E0-4399-8149-B0B32C5ADFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0844A439-032F-405A-8A97-549A52055C8D}
+	EndGlobalSection
+EndGlobal
