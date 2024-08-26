@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Office2010.Excel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ namespace QTHT.Controllers
             {
                 return NotFound();
             }
+            ViewBag.StationConfigs = await _context.StationConfig.ToListAsync();
             var device = await _context.Device.FindAsync(id);
             ViewBag.PumpName = device.Name;
             ViewBag.ESP8266 = device.ESP8266ID;
@@ -48,23 +50,7 @@ namespace QTHT.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Sensor == null)
-            {
-                return NotFound();
-            }
-
-            var sensor = await _context.Sensor
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (sensor == null)
-            {
-                return NotFound();
-            }
-
-            return View(sensor);
-        }
-
+        [Authorize(Roles = "0")]
         public IActionResult Create()
         {
             var sensor = new Sensor();
@@ -74,6 +60,7 @@ namespace QTHT.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Create([Bind("ID,DeviceID,SensorType,Created,Updated")] Sensor sensor)
         {
             if (ModelState.IsValid)
@@ -85,7 +72,8 @@ namespace QTHT.Controllers
             return View(sensor);
         }
 
-        // GET: Sensor/Edit/5
+        
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Sensor == null)
@@ -103,6 +91,7 @@ namespace QTHT.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int id, [Bind("ID,DeviceID,SensorType,Created,Updated")] Sensor sensor)
         {
             if (id != sensor.ID)
@@ -134,7 +123,7 @@ namespace QTHT.Controllers
             return PartialView("_Update", sensor);
         }
 
-        // GET: Sensor/Delete/5
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Sensor == null)
@@ -152,9 +141,10 @@ namespace QTHT.Controllers
             return PartialView("_Delete", sensor);
         }
 
-        // POST: Sensor/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Sensor == null)

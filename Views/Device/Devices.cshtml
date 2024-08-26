@@ -2,6 +2,11 @@
 @{
     var listDevice = Model.Devices;
 }
+@using System.Security.Claims
+@{
+    var userRoles = User.FindAll(ClaimTypes.Role).Select(r => r.Value);
+}
+
 <div class="table-responsive over_auto">
     <table id="StationConfig" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
         <thead>
@@ -56,8 +61,9 @@
                         <td>@item.Created</td>
                         <td>@item.Updated</td>
                         <td class="d-flex flex-row justify-content-around">
-                            
-                            <a href="/Sensor/Index/@item.ID" class="btn btn-warning btn-xs">
+                            @if (userRoles.Contains("0"))
+                            {
+                                 <a href="/Sensor/Index/@item.ID" class="btn btn-warning btn-xs">
                                 <i class="fa fa-gear" aria-hidden="true"></i>
                             </a>
                             <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editDevice-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
@@ -65,8 +71,8 @@
                             </button>
                             <button type="button" class="btn btn-danger btn-xs quickDelete" data-toggle="ajax-modal" data-target="@("deleteDevice-"+item.ID)" data-url="@Url.Action("Delete")/@item.ID">
                             <i class="fa fa-trash-o"></i>
-                            </button>
-                            
+                            </button>   
+                            }
                         </td>
                     </tr>
                 }

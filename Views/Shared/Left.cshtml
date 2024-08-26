@@ -4,6 +4,10 @@
     //var isAdminConfig = (isAdminNoRole && CUser.IsAdmin && CUser.IDChannel == 0);
     var StationConfigs = ViewBag.StationConfigs != null ? (List<StationConfig>)ViewBag.StationConfigs : new List<StationConfig>();
 }
+@using System.Security.Claims
+@{
+    var userRoles = User.FindAll(ClaimTypes.Role).Select(r => r.Value);
+}
 <div class="sidebar-header-wrapper hidden">
     <input type="text" class="searchinput" placeholder="Tìm kiếm" />
     <i class="glyphicon orange glyphicon-search"></i>
@@ -55,7 +59,9 @@
             </ul>
         </div>
     </li>
-    <li class="category_item">
+    @if (userRoles.Contains("0"))
+    {
+        <li class="category_item">
         <a href="#" class="menu-dropdown">
             <i class="menu-icon orange ionicons ion-android-contact"></i>
             <span class="menu-text">Tài khoản hệ thống</span>
@@ -70,6 +76,8 @@
             </li>
         </ul>
     </li>
+    }
+    
 </ul>
 <script>
     function filterMenu() {

@@ -3,6 +3,11 @@
     var listStation = Model.StationConfigs;
     var listPump = Model.Devices;
 }
+@using System.Security.Claims
+@{
+    var userRoles = User.FindAll(ClaimTypes.Role).Select(r => r.Value);
+}
+
 <div class="table-responsive over_auto">
     <table id="StationConfig" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
         <thead>
@@ -49,13 +54,16 @@
                         </td>
                         <td>@item.Address</td>
                         <td>
-                            
-                            <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editStationConfig-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
+                            @if (userRoles.Contains("0"))
+                            {
+                                 <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editStationConfig-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             </button>
                             <button type="button" class="btn btn-danger btn-xs quickDelete" data-toggle="ajax-modal" data-target="@("deleteStationConfig-"+item.ID)" data-url="@Url.Action("Delete")/@item.ID">
                             <i class="fa fa-trash-o"></i>
                             </button>
+                            }
+                            
                             @*<a class="btn btn-danger btn-xs quickDelete" data-id="@item.ID" data-target=".ui-dialog:visible" title="Xóa" href="/">
                                 <i class="fa fa-trash-o"></i>
                             </a>*@

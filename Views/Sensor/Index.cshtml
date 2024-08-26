@@ -4,6 +4,10 @@
 @{
     Layout = "~/Views/Shared/_LayoutManagement.cshtml";
 }
+@using System.Security.Claims
+@{
+    var userRoles = User.FindAll(ClaimTypes.Role).Select(r => r.Value);
+}
 
 
 <div class="breadcrumb_page">
@@ -52,13 +56,17 @@
                             </form>
                         </div>
                         <div class="DTTT btn-group">
-                            <a title="Xóa" data-href="/translate/is-deletes.html"
+                            @if (userRoles.Contains("0"))
+                            {
+                                <a title="Xóa" data-href="/translate/is-deletes.html"
                                class="btn btn-danger hidden actMultiTicks quickDeletes" tabindex="0" aria-controls="searchable">
                                 <i class="fa fa-trash"></i> Xóa
                             </a>
                             <button type="button" class="btn btn-info quickUpdate" data-toggle="ajax-modal" data-target="#addSensor" data-url="@Url.Action("Create")">
                             <i class="fa fa-plus"></i>
                             Tạo mới</button>
+                            }
+                            
                         </div>
                         <partial name="Sensors" />
                     </div>

@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using QTHT.Models;
 using QTHT.Models.Data;
 using QTHT.Models.View;
+using Microsoft.AspNetCore.Authorization;
 
 namespace QTHT.Controllers
 {
@@ -22,7 +23,7 @@ namespace QTHT.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Index(string SearchString)
         {
             var model = new UserModel();
@@ -38,23 +39,7 @@ namespace QTHT.Controllers
                           Problem("Entity set 'QTHTDataContext.User'  is null.");
         }
 
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.User == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.User
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
-        }
-
+        [Authorize(Roles = "0")]
         public IActionResult Create()
         {
             var user = new User();
@@ -63,6 +48,7 @@ namespace QTHT.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Create([Bind("ID,Name,Account,Password,Role,Created")] User user)
         {
             if (ModelState.IsValid)
@@ -75,6 +61,7 @@ namespace QTHT.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.User == null)
@@ -92,6 +79,7 @@ namespace QTHT.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Account,Password,Role,Created")] User user)
         {
             if (id != user.ID)
@@ -125,6 +113,7 @@ namespace QTHT.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.User == null)
@@ -144,6 +133,7 @@ namespace QTHT.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.User == null)

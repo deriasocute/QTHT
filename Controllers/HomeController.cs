@@ -21,9 +21,10 @@ namespace QTHT.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
             var dashAdminModel = GetDashAdminModel();
+            ViewBag.StationConfigs = await _context.StationConfig.ToListAsync();
             return View(dashAdminModel);
         }
 
@@ -44,7 +45,6 @@ namespace QTHT.Controllers
             var colors = new List<string> { "#a0d468", "#5db2ff", "#e75b8d", "#fb6e52", "#ffce55", "#1eb39d", "#3b7d9d", "#91b8e1", "#e74c3c", "#ffcd02", "#64ddbb", "#1dabb8", "#d8335b", "#e76b6b", "#a58bd5", "#3172d6", "#8f3fb0", "#c33825", "#9f5b44", "#ff6766", "#bf005f", "#0000bf", "#007f3f" };
             var users = _context.User.ToList();
             var stationConfigs = _context.StationConfig.ToList();
-            var pumpConfig = _context.PumpConfig.ToList();
             var listStatus = new List<int>();
             foreach(var stationConfig in stationConfigs)
             {

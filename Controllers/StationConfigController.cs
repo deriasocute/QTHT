@@ -21,6 +21,7 @@ using QTHT.Models;
 using QTHT.Models.Data;
 using QTHT.Models.View;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace QTHT.Controllers
 {
@@ -33,8 +34,6 @@ namespace QTHT.Controllers
             _context = context;
             _hostingEnvironment = hostingEnvironment;
         }
-
-        // GET: StationConfig
         public async Task<IActionResult> Index(string SearchString)
         {
             var model = new StationConfigModel();
@@ -143,6 +142,7 @@ namespace QTHT.Controllers
             return RedirectToAction("Index", "StationConfig");
 
         }
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> PublishMessage()
         {
             int id = Convert.ToInt32(TempData["idStation"]);
@@ -227,7 +227,7 @@ namespace QTHT.Controllers
         }
 
         #endregion
-
+        [Authorize(Roles = "0")]
         // GET: StationConfig/Create
         public IActionResult Create()
         {
@@ -245,9 +245,9 @@ namespace QTHT.Controllers
             var stationConfig = new StationConfig();
             return PartialView("_Update", stationConfig);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Create([Bind("ID,Address,Name,DeviceID")] StationConfig stationConfig)
         {
             if (ModelState.IsValid)
@@ -258,7 +258,7 @@ namespace QTHT.Controllers
             }
             return View(stationConfig);
         }
-
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int? id)
         {
             var listCodePump = _context.Device.ToList();
@@ -287,6 +287,7 @@ namespace QTHT.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Address,Name,DeviceID")] StationConfig stationConfig)
         {
             if (id != stationConfig.ID)
@@ -317,6 +318,7 @@ namespace QTHT.Controllers
             return View(stationConfig);
         }
 
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.StationConfig == null)
@@ -336,6 +338,7 @@ namespace QTHT.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "0")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.StationConfig == null)
