@@ -1,0 +1,52 @@
+body.body-dashboard:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url("./image/BG_star.png");
+  background-color: unset !important;
+}
+
+@mixin content($Header-text-body) {
+  color: $Header-text-body;
+}
+
+body.body-dashboard {
+  .navbar .navbar-inner {
+    background-color: #005585 !important;
+    background: #005585 !important;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2392156863);
+    color: #fff;
+  }
+}
+
+body.body-dashboard .page-dashboard .list_module a {
+  color: $white;
+}
+body.body-dashboard
+  .navbar
+  .navbar-inner
+  .navbar-header
+  .navbar-account
+  .account-area
+  .login-area
+  section
+  h2
+  span {
+  color: #fff;
+}
+body.body-dashboard
+  .navbar
+  .navbar-inner
+  .navbar-header
+  .navbar-account
+  .account-area
+  > li
+  > a
+  > .click_caret {
+  color: #fff;
+}

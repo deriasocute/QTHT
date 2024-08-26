@@ -1,0 +1,23 @@
+.ui-dialog .ui-dialog-titlebar {
+    height: 58px !important;
+    background-color: #fff !important;
+    background: #fff !important;
+    box-shadow: inset 0px -1px 0px #ececec;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    font-weight: 500;
+    color: #333333 !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close::before {
+    font-size: 22px !important;
+    color: #00213d;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    width: 28px;
+    height: 28px !important;
+    right: 10px !important;
+    top: 10px;
+}

@@ -1,0 +1,10 @@
+.os-theme-light > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+    background: $pre-gray;
+
+    &:hover {
+        background: $pre-gray;
+    }
+}
+.hidden {
+    display: none;
+}

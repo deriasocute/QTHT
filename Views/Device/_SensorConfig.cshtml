@@ -1,0 +1,69 @@
+﻿@model QTHT.Models.View.DeviceModel
+@{
+    var ListSensor = Model.Sensors;
+    var device = Model.Device;
+    var index = 1;
+}
+<div class="modal fade over-flow-hidden" id="@(string.IsNullOrEmpty(Model.Sensor.SensorType) ? "configSensor-" : "configSensor-" + @Model.Device.ID)">
+    <div class="modal-dialog w-700px">
+        <div class="modal-content">
+            <div class="modal-header title-form">
+                <h4 class="modal-title white" id="">
+                    Cấu hình cảm biến
+                </h4>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+            <h4 class="title-block m-0">
+                Danh sách cấu hình api
+            </h4>
+            <button type="button" title="Thêm dòng" class="btn btn-info add_row autoindex"
+                    data-target="#paramContainer" data-temp="#paramTemplate">
+                <i class="e-002"></i><span>Thêm dòng</span>
+            </button>
+        </div>
+            <div class="modal-body">
+                <table id="TblAPIConfigs"
+                   class="table table-bordered table-hover table-striped dataTable stacktable_inited stacktable large-only"
+                   role="grid" aria-describedby="searchable_info">
+                <thead>
+                    <tr role="row">
+                        <th class="wpx50 center" tabindex="0">STT</th>
+                        <th class="wpx50 center" tabindex="0">ID</th>
+                        <th class="wpx100 center" tabindex="0">Máy bơm</th>
+                        <th class="">
+                           Loại cảm biến
+                        </th>
+                        <th class="">Mã tham số</th>
+                        <th class="wpx160" tabindex="0" aria-controls="searchable">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="paramContainer">
+                    @if (ListSensor.Any())
+                    {
+                        foreach (var item in ListSensor)
+                        {
+                            Model.Index = index;
+                            index++;
+                            Model.Sensor = item;
+                            @Html.Partial("SensorPartial", Model);
+                        }
+                    }
+                </tbody>
+            </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" data-save="modal">Xong</button>
+            </div>
+            <script type="text/template" id="paramTemplate">
+            @{
+                var model = new QTHT.Models.View.DeviceModel();
+                model.Sensor = new Sensor();
+                model.Sensor.DeviceID = device.ID;
+                model.Index = index;
+            @Html.Partial("SensorPartial", model);
+            }
+            </script>
+        </div>
+    </div>
+</div>

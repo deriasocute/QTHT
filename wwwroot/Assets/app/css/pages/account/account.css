@@ -1,0 +1,81 @@
+.login.login-2 .login-signin {
+    display: none;
+}
+
+.login.login-2.login-signin-on .login-signup {
+    display: none;
+}
+
+.login.login-2.login-signin-on .login-signin {
+    display: block;
+}
+
+.login.login-2.login-signin-on .login-forgot {
+    display: none;
+}
+
+.login.login-2.login-signin-on .content-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login.login-2.login-signin-on .content-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login.login-2.login-signin-on .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login.login-2.login-signin-on .content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 66, 93, .7);
+    z-index: 2;
+}
+
+@media (min-width: 992px) {
+    .login.login-2 .login-aside {
+        width: 100%;
+        max-width: 600px;
+    }
+    .login.login-2 .login-form {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .login.login-2 .login-aside {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .login.login-2 .login-form {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .login.login-2 .login-form {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,9 +1,287 @@
-﻿@model QTHT.Models.StationConfig
+﻿@model QTHT.Models.View.DashAdminModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">@Model.Address</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <div id="Section" class="">
+            <div id="SHContainer" class="search-container h100px"></div>
+            <div class="page-body list-module-body mt-4">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="useMoreSlide" id="module_slide" data-target="module_slide">
+                            <div class="more_slide_nav more_slide_prev">
+                                <span class="slide_icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                                <span class="prev_count"></span>
+                            </div>
+                            <div class="more_slide_nav more_slide_next">
+                                <span class="slide_icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                <span class="next_count"></span>
+                            </div>
+                            <div class="list-module more_slide">
+                                <div class="module-item more_slide_item">
+                                    <div class="module-item-content module_admin">
+                                        <div class="module-item-inner">
+                                            <a href="/stationconfig/index" title="Cấu hình hệ thống">
+                                                <div class="slideIco circle-module-item"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></div>
+                                                <span>Cấu hình hệ thống</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="module-item more_slide_item">
+                                    <div class="module-item-content module_admin">
+                                        <div class="module-item-inner">
+                                            <a href="/admin/vi/log.html?IsLogin=1" title="Nhật ký hệ thống">
+                                                <p class="slideIco circle-module-item"><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i></p>
+                                                <span>Nhật ký hệ thống</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="module-item more_slide_item">
+                                    <div class="module-item-content module_admin">
+                                        <div class="module-item-inner">
+                                            <a href="/user/index" title="Tài khoản hệ thống">
+                                                <div class="slideIco circle-module-item"><i class="ionicons ion-android-contact" aria-hidden="true"></i></div>
+                                                <span>Tài khoản hệ thống</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body Chart-page-body fsi-group-body">
+                <div class="row">
+                    <div class="ChartFlex">
+                        <div class="Flex_item custom_statistics Flex_full_width bg_none">
+                            <div role="tabpanel" class="fsi_group_tabs">
+                            <!-- Nav tabs -->
+                                @*<ul class="nav nav-tabs tabs_visible" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#TQAdmin" aria-controls="tab" role="tab" data-toggle="tab"><i class="fa fa-cog"></i> Hệ thống</a>
+                                    </li>
+                                </ul>*@
+                            <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="TQAdmin">
+                                        <div class="block_shadow ChartSection">
+                                            <h3 class="mt-4 ml-20 text-uppercase" style="font-weight:bold !important;">
+                                                <i class="fa fa-pie-chart"></i>
+                                                    Tổng quan hệ thống
+                                            </h3>
+                                            <form class="quickSearch navbar-form navbar-right fsi_group_filter hidden" data-target="#TQAdmin" action="/admin/vi/home.html" method="post" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <input name="StartDate" Value="" type="text" class="form-control date" placeholder="Từ ng&#224;y">
+                                                    <input name="EndDate" Value="" type="text" class="form-control date" placeholder="Đến ng&#224;y">
+                                                </div>
+                                                <button class="btn btn-info" type="submit">T&#236;m kiếm</button>
+                                            </form>
+                                            <div class="ChartSection_body">
+                                                <div class="list_items_count item_count_4">
+                                                    <div class="item_count">
+                                                        <span>
+                                                            <i class="fa fa-user" aria-hidden="true"></i> Tổng số người dùng
+                                                        </span>
+                                                        <span>
+                                                            @Model.TotalUser
+                                                        </span>
+                                                    </div>
+                                                    <div class="item_count">
+                                                        <span>
+                                                            <i class="fa fa-map-pin" aria-hidden="true"></i> Tổng số trạm
+                                                        </span>
+                                                        <span>
+                                                            3
+                                                        </span>
+                                                    </div>
+                                                    <div class="item_count">
+                                                        <span>
+                                                            <i class="fa fa-cogs" aria-hidden="true"></i> Tổng số máy bơm
+                                                        </span>
+                                                        <span>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                    <div class="item_count">
+                                                        <span>
+                                                            <i class="fa fa-power-off" aria-hidden="true"></i> Đang bật
+                                                        </span>
+                                                        <span>
+                                                            2
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="charts_body">
+                                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                                        <div class="areaspline-chart" data-target="userChart_areaspline">
+                                                            <div id="userChart_areaspline" class="fsi_group_chart" style="height: 300px; margin: 0 auto" data-value='@Model.UserMories'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="DocproChart_legend legend_areaspline">
+                                                            <div class="Legend_item">
+                                                                <p><i class="fa fa-user" aria-hidden="true"></i></p>
+                                                                <p>
+                                                                    <span>Tổng số người dùng:</span>
+                                                                    <span>@Model.TotalUser</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="Legend_item">
+                                                                <p><i class="fa fa-user-plus" aria-hidden="true"></i></p>
+                                                                <p>
+                                                                    <span>Người dùng mới:</span>
+                                                                    <span>@Model.TotalUserNew</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                                        <div id="group_count_chart" class="hight-pie-chart"
+                                                            style="min-width: 280px; height: 360px; max-width: 600px; margin: 0 auto"
+                                                            data-value='@Model.StatusMories'
+                                                            data-title="THỐNG KÊ TRẠM BƠM"></div>
+                                                        <div class="fsi_group_chart">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                                        <div id="QLHTChart_id" class="QLHT-chart"
+                                                            style="min-width: 280px; height: 360px; margin: 0 auto"
+                                                            data-value='{"data":[94671,2753],"label":"Tổng thời gian hoạt động","ykey":"Số giờ","categories":["6-2024","7-2024"],"title":"THỐNG KÊ THỜI GIAN HOẠT ĐỘNG"}'
+                                                            data-title="THỐNG KÊ THỜI GIAN HOẠT ĐỘNG">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<div class="tab-content mt-20">
+                                    <h3 class="mt-4 ml-20 text-uppercase" style="font-weight:bold !important;">
+                                        <i class="menu-icon ionicons ion-podium"></i>
+                                            Bảng thống k&#234; dung lượng lưu trữ hệ thống
+                                    </h3>
+                                    <form class="quickSearch" data-state="0" data-target="#tblChannelStorage" action="/admin/vi/home/get-channel-storage-by-fields.html" method="post" enctype="multipart/form-data">
+                                        <div class="d-flex align-items-center justify-content-start padding_lr_10 gap-12px mb-10">
+                                            <div class="min-w-250px">
+                                                <input name="Keyword" Value="" type="text" class="form-control" placeholder="Nhập từ kh&#243;a">
+                                            </div>
+                                            <div class="">
+                                                <select class="select2 select-cus onFilter" name="Status">
+                                                    <option value="0">Tất cả trạng th&#225;i</option>
+                                                    <option value="1">
+                                                        B&#236;nh thường
+                                                    </option>
+                                                    <option value="2">
+                                                        Sắp hết dung lượng
+                                                    </option>
+                                                    <option value="3">
+                                                        Hết dung lượng
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn btn-info" type="submit">T&#236;m kiếm</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="padding_lr_10" id="tblChannelStorage">
+                                        <div class="table-responsive over_auto">
+                                            <table id="" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="wpx50 center" tabindex="0">STT</th>
+                                                        <th class="wpx430 text-center" tabindex="0" aria-controls="searchable">T&#234;n Cloud</th>
+                                                        <th class="center" tabindex="0">Dung lượng đăng k&#253;</th>
+                                                        <th class="text-center">Kho lưu trữ</th>
+                                                        <th class="text-center">Kho t&#224;i liệu c&#225; nh&#226;n</th>
+                                                        <th class="text-center">Kho t&#224;i liệu chat nội bộ</th>
+                                                        <th class="center" tabindex="0">Tổng dung lượng đ&#227; sử dụng</th>
+                                                        <th class="center" tabindex="0">Trạng th&#225;i</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row">
+                                                        <td class="text-center">1</td>
+                                                        <td>Hệ thống tự động h&#243;a doanh nghiệp AXA</td>
+                                                        <td class="text-center">500 GB</td>
+                                                        <td class="text-center">15.6 MB</td>
+                                                        <td class="text-center">0 B</td>
+                                                        <td class="text-center">0 B</td>
+                                                        <td class="text-center">15.6 MB</td>
+                                                        <td class="text-center"><div class="label label-primary">B&#236;nh thường</div></td>
+
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                                <div class="tab-content mt-20">
+                                    <h3 class="mt-4 ml-20 text-uppercase" style="font-weight:bold !important;">
+                                        <i class="menu-icon ionicons ion-podium"></i>
+                                            Bảng thống k&#234; t&#236;nh trạng OCR hệ thống
+                                    </h3>
+                                    <form class="quickSearch" data-state="0" data-target="#tblChannelOCR" action="/admin/vi/home/search-channel-ocr.html" method="post" enctype="multipart/form-data">
+                                        <div class="d-flex align-items-center justify-content-start padding_lr_10 gap-12px mb-10">
+                                            <div class="min-w-250px">
+                                                <input name="Keyword" Value="" type="text" class="form-control" placeholder="Nhập từ kh&#243;a">
+                                            </div>
+                                            <div class="">
+                                                <select class="select2 select-cus onFilter" name="Status">
+                                                    <option value="0">Tất cả trạng th&#225;i</option>
+                                                    <option value="1">
+                                                        B&#236;nh thường
+                                                    </option>
+                                                    <option value="2">
+                                                        Sắp sử dụng hết
+                                                    </option>
+                                                    <option value="3">
+                                                        Đ&#227; sử dụng hết
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn btn-info" type="submit">T&#236;m kiếm</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="padding_lr_10" id="tblChannelOCR">
+                                        <div class="table-responsive over_auto">
+                                            <table id="" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="wpx50 center" tabindex="0">STT</th>
+                                                        <th class="wpx430 text-center" tabindex="0" aria-controls="searchable">T&#234;n Cloud</th>
+                                                        <th class="center" tabindex="0">Số trang OCR giới hạn</th>
+                                                        <th class="center" tabindex="0">Số trang OCR đ&#227; sử dụng</th>
+                                                        <th class="center" tabindex="0">Trạng th&#225;i</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row">
+                                                        <td class="text-center">1</td>
+                                                        <td>Hệ thống tự động h&#243;a doanh nghiệp AXA</td>
+                                                        <td class="text-center">Kh&#244;ng giới hạn</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center"><div class="label label-primary">B&#236;nh thường</div></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>                                  
+                                    </div>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

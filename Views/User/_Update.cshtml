@@ -1,0 +1,84 @@
+﻿@model User
+<div class="modal fade over-flow-hidden" id="@(string.IsNullOrEmpty(Model.Account) ? "addUser" : "editUser-" + @Model.ID)">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header title-form">
+                @if (string.IsNullOrEmpty(Model.Account))
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Thêm mới người dùng
+                    </h4>
+                }
+                else
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Chỉnh sửa người dùng
+                    </h4>
+                }
+            </div>
+            <div class="modal-body">
+                <form asp-controller="User" asp-action="@(string.IsNullOrEmpty(Model.Account) ? "Create" : "Edit")" method="post">
+                    <div class="frame-one container-fluid p-4">
+                        <div class="d-flex flex-column w-100">
+                            <div class="form-group row mb-10">
+                                <label asp-for="Name" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Name" class="form-control w-100" placeholder="Tên người dùng" value="@Model.Name"/>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="Account" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Account" class="form-control w-100" placeholder="Tài khoản" value="@Model.Account"/>
+                                    <span asp-validation-for="Account" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="Password" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Password" class="form-control w-100" placeholder="Mật khẩu" value="@Model.Password"/>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="Role" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Role" class="form-control w-100" placeholder="Vai trò" value="@Model.Role"/>
+                                    <span asp-validation-for="Role" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10 hidden">
+                                <label asp-for="Created" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Created" class="form-control__edit form-control date" type="datetime" placeholder="Ngày tạo" value="@Model.Created"/>
+                                    <span asp-validation-for="Created" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    @*<div class="form-group">
+                        <label asp-for="Account" class="control-label"></label>
+                        <input asp-for="Account" class="form-control" />
+                        <span asp-validation-for="Account" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Role" class="control-label"></label>
+                        <input asp-for="Role" class="form-control" />
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>*@
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" data-save="modal">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>

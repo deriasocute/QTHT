@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LoginLayout";
+}
+<form asp-action="Login" asp-controller="User" class="px-3 form-login">
+    <div class="d-flex flex-row align-items-center justify-content-center">
+        <img src="/img/logo.png" class="card-img-top logo-shop">
+        <h3 class="margin-tilte color-tilte">Đăng nhập hệ thống</h3>
+    </div>
+    <div class="form-group mt-4 icon-user">
+        <input type="text" class="form-control mt-4 form-input" name="name" placeholder="Tên đăng nhập">
+    </div>
+    <div class="form-group mt-4 icon-lock">
+        <input type="password" class="form-control mt-4 form-input" name="password" placeholder="Mật khẩu">
+    </div>
+    <button type="submit" class="btn btn-primary btn-login">Đăng nhập</button>
+</form>

@@ -1,0 +1,100 @@
+
+.quicksearch_form__containe--status {
+    margin-right: 10px;
+
+    .input_fields {
+        position: relative;
+        width: 100%;
+
+        select {
+            width: 160px;
+            height: 32px;
+            border: 1px solid #ccc;
+            color: inherit;
+            font-family: inherit;
+            height: 32px;
+            font-size: inherit;
+            line-height: inherit;
+            padding: 8px 10px;
+            outline: none;
+            border-radius: 4px;
+            margin: 0;
+
+            &:focus {
+                color: #495057;
+                background-color: #fff;
+                border-color: #80bdff;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(0,123,255,.2)
+            }
+        }
+    }
+}
+
+.quicksearch_form {
+    .quicksearch_form__container {
+        .quicksearch_form__container--list {
+            display: flex;
+
+            .quicksearch_form__containe--inputtext {
+                input {
+                    width: 250px;
+                    margin-right: 10px;
+                }
+            }
+
+            .quicksearch_form__containe--begindate {
+                margin-right: 10px;
+                width: 160px;
+                height: 32px;
+            }
+
+            .quicksearch_form__containe--enddate {
+                margin-right: 10px;
+                width: 160px;
+                height: 32px;
+            }
+
+            .quicksearch_form__containe--filter {
+                margin-right: 10px;
+
+                a, input {
+                    width: 60px;
+                    height: 32px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 6px 10px 5px;
+                    background: $white;
+                    border: 1px solid $pre-gray;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    justify-content: space-between;
+                    flex-direction: initial;
+
+                    img {
+                        display: inline-block;
+                        overflow: inherit;
+                    }
+                }
+            }
+
+            .quicksearch_form__containe--search {
+                button.btn-search {
+                    padding: 6px 10px 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 98px;
+                    height: 32px;
+
+                    img {
+                        display: inline-block;
+                        overflow: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

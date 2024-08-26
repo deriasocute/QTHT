@@ -1,0 +1,214 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản trị hệ thống</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="/img/apple-icon.png">
+    @*<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">*@
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/templatemo.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body{
+            background-image: linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),url('/img/bg2.jpg');
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+        }
+        .contain-form-login{
+            background-color: rgba(204, 204, 204, 0.9);
+            border-radius: 40px;
+            width: 30%;
+            position: absolute;
+            right: 4%;
+            height: 80vh;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .form-login{
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            color: #374151;
+            z-index: 2;
+        }
+        .color-text{
+            color: #2ac2d7;
+        }
+        .color-tilte{
+            color: #fff;
+        }
+        .margin-tilte{
+            margin-top: 75px;
+        }
+        .btn-login{
+            margin-top: 40px;
+            width: 100%;
+            background-color: #2ac2d7;
+            border-radius: 12px;
+            height: 48px !important;
+            font-size: 16px !important;
+            border: none;
+        }
+        .btn-login:hover{
+            background-color: #2ac2d7 !important;
+        }
+        .form-input{
+            border: 1px solid #d1d5db;
+            border-radius: 12px !important;
+            height: 48px !important;
+            line-height: 48px !important;
+            font-size: 16px !important;
+            padding-left: 18px;
+            padding-right: 45px;
+            box-shadow: none;
+            width: 100%;
+        }
+        .icon-user:before { 
+        font-family: 'Font Awesome 5 Free';
+        content: "\f007";
+        font-weight: 900;
+        position: absolute;
+        right: 35px;
+        top: 10px;
+        height: 24px;
+        width: 24px;
+        margin-left: .5em;
+        width: 0;
+        overflow: visible;
+        display: inline-block;
+        line-height: 24px;
+        z-index: 1;
+        color: #ccc;
+    }
+    .icon-lock:before { 
+        font-family: 'Font Awesome 5 Free';
+        content: "\f023";
+        font-weight: 900;
+        position: absolute;
+        right: 35px;
+        top: 10px;
+        height: 24px;
+        width: 24px;
+        margin-left: .5em;
+        width: 0;
+        overflow: visible;
+        display: inline-block;
+        line-height: 24px;
+        z-index: 1;
+        color: #ccc;
+    }
+
+.icon-user { 
+    position: relative;
+}
+
+.icon-lock { 
+    position: relative;
+}
+.text-tilte{
+    text-align: center;
+    font-size: 30px;
+}
+.text-content{
+    text-align: center;
+    font-size: 20px !important;
+    color: #fff;
+}
+.form-content{
+    transform: translateY(-50%);
+    left: 10%;
+    position: absolute;
+    top: 45%;
+}
+.logo-shop{
+    position: absolute;
+    height: 140px;
+    width: 150px;
+    top: -23%;
+}
+.text-connect{
+    font-size: 14px;
+    color: #fff;
+}
+.form-connect{
+    color: #fff;
+    position: absolute;
+    bottom: 3%;
+    left: 4%;
+    max-width: 750px;
+}
+.padding-icon{
+    padding-top: 5px;
+}
+    </style>
+
+</head>
+
+<body>
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5 form-content d-flex align-items-center flex-column">
+                    <img src="/img/logo.png" class="card-img-top w-25">
+                    <h2 class="color-text text-tilte">HỆ THỐNG QUẢN TRỊ TRẠM BƠM</h2>
+                    <p class="text-content">Ứng dụng IoT cho đời sống</p>
+                </div>
+                <div class="form-connect">
+                    <div class="d-flex">
+                        <i class="fa fa-map-marker-alt padding-icon"></i>
+                        <p class="ms-4 text-connect">Thái Thịnh - Trung Liệt - quận Đống Đa - Hà Nội</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa fa-phone padding-icon"></i>
+                        <p class="ms-4 text-connect">Phone: 0123456789</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa fa-envelope padding-icon"></i>
+                        <p class="ms-4 text-connect">ducnguyen2928@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 contain-form-login">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/templatemo.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+	
+    </script>
+    
+</body>
+
+</html>

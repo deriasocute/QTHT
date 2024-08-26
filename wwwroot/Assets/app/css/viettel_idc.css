@@ -1,0 +1,1110 @@
+:root {
+    --weone-main: #3992a0;
+    --weone-main-dark: #237684;
+    --weone-main-light: #50b0be;
+    --weone-sub: #c01f62;
+    --weone-sub-dark: #AE0949;
+    --weone-sub-light: #D50B59;
+
+    --viettel-primary-color: #ee0033;
+    --header-hover: #f34d70;
+    --header-message: #363132;
+    --viettel-banner-login: #f5f5f5;
+    --viettel-color-text: #252525;
+    --viettel-btn-primary: #ee0033;
+}
+/* General */
+body a {
+    color: var(--viettel-primary-color);
+}
+
+    body a:hover {
+        color: var(--header-hover);
+    }
+
+/* Login */
+.login_input {
+    background: var(--viettel-banner-login) !important;
+}
+
+body .form-login .remember + .form-group > button, .btn-maintain {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+    body .form-login .remember + .form-group > button:hover, .btn-maintain:hover {
+        background-color: var(--header-hover) !important;
+        border-color: var(--header-hover) !important;
+    }
+
+.squared_checkbox label:after {
+    border-color: var(--weone-sub);
+}
+
+.itm_pic:before {
+    background-color: rgb(25 99 111 / 45%) !important;
+}
+
+.itm_pic:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(25 99 111 / 45%);
+    mix-blend-mode: screen;
+}
+
+.info_login.info-add a {
+    color: #fff !important;
+}
+
+body[id*="body-login"] .box_cap > h3 > span {
+    display: inline-block;
+}
+
+/* Update 15/02/2022 */
+
+
+.login_info .box_cap {
+    height: auto;
+    left: 4%;
+}
+
+.box_cap {
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo_left img {
+    max-height: 160px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.box_cap .sologan-right > p {
+    font-size: 20px;
+    color: #fff !important;
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.login_info {
+    position: relative;
+    float: none !important;
+}
+
+    .login_info .itm_pic {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+    }
+
+    .login_info .login_slide {
+        width: 100%;
+        top: 0 !important;
+        bottom: auto !important;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative !important;
+        left: 0 !important;
+    }
+
+    .login_info .itm_pic img {
+        object-position: center !important;
+    }
+
+
+
+.info_login.info-add > * {
+    grid-column: 1;
+}
+
+@media(max-width: 1440px) {
+
+    .box_cap > h3 {
+        font-size: 30px !important;
+    }
+
+    .logo_left img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .box_cap > h3 {
+        font-size: 26px !important;
+    }
+
+    .logo_left img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .login_info .login_slide {
+        padding: 24px;
+    }
+
+    .info_login.info-add {
+        padding: 15px 24px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .info_login.info-add {
+        display: none !important;
+    }
+}
+
+
+/* Dashboard */
+.business_management__content > .row {
+    display: grid;
+    grid-template-columns: 25% 33.5% 41.5%;
+    max-width: 100% !important;
+}
+
+    .business_management__content > .row > div:first-child {
+        grid-column: 1 / span 3;
+    }
+
+    .business_management__content > .row > div:nth-of-type(2) {
+        grid-column: 1 / span 1;
+        width: 100%;
+    }
+
+    .business_management__content > .row > div:nth-of-type(3) {
+        grid-column: 2 / span 1;
+        width: 100%;
+    }
+
+    .business_management__content > .row > div:nth-of-type(4) {
+        grid-column: 3 / span 1;
+        width: 100%;
+    }
+
+@media(max-width:991px) {
+    .business_management__content > .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .business_management__content > .row > div:first-child {
+            grid-column: 1 / span 2;
+        }
+
+        .business_management__content > .row > div:nth-of-type(2) {
+            grid-column: 1 / span 2;
+        }
+
+        .business_management__content > .row > div:nth-of-type(3) {
+            grid-column: 1 / span 1;
+        }
+
+        .business_management__content > .row > div:nth-of-type(4) {
+            grid-column: 2 / span 1;
+        }
+}
+
+@media(max-width:767px) {
+    .business_management__content > .row {
+        grid-template-columns: 1fr;
+    }
+
+        .business_management__content > .row > div:first-child {
+            grid-column: 1 / span 1;
+        }
+
+        .business_management__content > .row > div:nth-of-type(2) {
+            grid-column: 1 / span 1;
+        }
+
+        .business_management__content > .row > div:nth-of-type(3) {
+            grid-column: 1 / span 1;
+        }
+
+        .business_management__content > .row > div:nth-of-type(4) {
+            grid-column: 1 / span 1;
+        }
+}
+
+.business_management .business_management__content {
+    max-width: calc(100% - 16.66%);
+}
+
+.business_management__content > .row > div:nth-of-type(3) {
+    padding-bottom: 14px;
+}
+
+.business_management__content > .row > div:nth-of-type(4) {
+    padding-bottom: 14px;
+}
+
+.ChartSection_body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    clear: both;
+}
+
+    .ChartSection_body .dataTables_wrapper {
+        width: 100%;
+    }
+
+.business_management .business_management__content h1.business_title {
+    margin-top: 0;
+}
+
+.ce-chart-legend {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+    .ce-chart-legend .legend-item {
+        margin: 6px 10px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+        .ce-chart-legend .legend-item .legend-dot {
+            width: 12px !important;
+            height: 12px;
+            border-radius: 50%;
+            float: left;
+            margin: 2px 4px 0 0;
+        }
+
+        .ce-chart-legend .legend-item .legend-title {
+            flex: 1;
+            min-width: 1px;
+        }
+
+.business_management__content .highcharts-container svg {
+    height: auto !important;
+}
+
+.body-dashboard {
+    background-image: url(/Assets/app/img/bg_viettel_idc.jpg);
+}
+
+.total_business__container--item {
+    border-color: rgba(255,255,255,0.25) !important;
+}
+
+body .list_module a {
+    color: var(--viettel-color-text) !important;
+}
+/* Header */
+body .user_item_info a {
+    color: var(--viettel-color-text) !important;
+}
+
+body .navbar .navbar-inner .navbar-header .navbar-account .account-area > li .dropdown-menu.dropdown-login-area > li .avatar-area .caption {
+    background-color: var(--weone-sub) !important;
+}
+
+body.body-dashboard .navbar .navbar-inner,
+body.body-dashboard .navbar-account_bg {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body:not(.body-dashboard) .navbar .navbar-inner {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+
+
+body.body-dashboard .navbar .navbar-inner .navbar-header .navbar-account .account-area > li.open > a,
+body.body-dashboard .navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a:hover {
+    background-color: var(--header-hover) !important;
+}
+
+body:not(.body-dashboard) .navbar .navbar-inner .navbar-header .navbar-account .account-area > li.open > a,
+body:not(.body-dashboard) .navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a:hover {
+    background-color: var(--header-hover) !important;
+}
+
+.user_activity .nav-tabs > li.active {
+    border-bottom: var(--header-hover) !important;
+}
+
+
+body .user_activity .nav-tabs,
+body .user_activity .nav-tabs > li > a:focus,
+body .user_activity .nav-tabs > li > a {
+    background: var(--viettel-primary-color) !important;
+}
+
+body .user_activity ._SeeMore a {
+    color: var(--weone-sub) !important;
+}
+
+body .user_activity .nav-tabs > li.active > a,
+body .user_activity .nav-tabs > li.active > a:focus,
+body .user_activity .nav-tabs > li.active > a:hover {
+    background-color: var(--header-hover) !important;
+}
+
+body .user_activity .nav-tabs > li > a:hover, .user_activity .nav-tabs > li > a:focus {
+    background-color: var(--header-hover) !important;
+}
+
+
+body .page-sidebar .sidebar-menu li.open > a,
+body .page-sidebar .sidebar-menu li.open > a i,
+body .page-sidebar .sidebar-menu li.active > a,
+body .page-sidebar .sidebar-menu li.active > a i,
+body .page-sidebar .sidebar-menu li.active > a .star {
+    color: var(--header-hover) !important;
+}
+
+body .page-sidebar .sidebar-menu > li > a i.menu-expand {
+    color: #999999 !important;
+}
+/* Dialog */
+body .ui-dialog .ui-dialog-title,
+body .ui-dialog .ui-dialog-titlebar {
+    background-color: var(--viettel-primary-color) !important;
+    background: var(--viettel-primary-color) !important;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+    border-top: 2px solid var(--header-hover) !important;
+}
+/* Button */
+form.quickSearch .btn-info:not([disabled]),
+.dialog_content_footer .ui-dialog-buttonset .btn-info,
+.dataTables_filter .btn-info,
+.dataTables_filter .btn.btn-primary:not([disabled]) {
+    background-color: var(--viettel-primary-color) !important;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+form.quickSearch .btn-info:not([disabled]):hover,
+.dialog_content_footer .ui-dialog-buttonset .btn-info:hover,
+.dataTables_filter .btn-info:hover,
+.dataTables_filter .btn.btn-primary:not([disabled]):hover {
+    background-color: var(--viettel-primary-color) !important;
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.dataTables_wrapper .DTTT .btn-info:not([disabled]),
+.dataTables_wrapper .DTTT .btn-primary:not([disabled]) {
+    background-color: #f5f5f5 !important;
+    color: #ec0100 !important;
+}
+
+.footer-dialogpop_edit .btn.btn-primary:not([disabled]),
+.permission-footer-actions .btn.btn-primary:not([disabled]),
+.dialog-footer .btn.btn-primary:not([disabled]),
+.dialog-footer .form-group .btn.btn-primary:not([disabled]) {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+#SHContainer .FrmSrDoc_sbm .btn.btn-primary:not([disabled]) {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+.permission-footer-actions .btn.btn-primary:not([disabled])
+/* Breadcrumb */
+body .page-breadcrumbs .breadcrumb li a,
+body .page-breadcrumbs .breadcrumb li i,
+body .breadcrumb > li > a,
+body .breadcrumb_page li a {
+    color: #757575 !important;
+}
+
+body .breadcrumb > .active {
+    color: #8f949b !important;
+}
+
+body .breadcrumb > li {
+    color: var(--viettel-color-text) !important;
+}
+
+/* Tab */
+body .page-container .nav-tabs {
+    background-color: #fff !important;
+}
+
+body .tab-content, .Detail_tabsView .tab-content {
+    border-top: 1px solid #e5e5e5 !important;
+    margin-top: 0;
+    padding-top: 15px !important;
+}
+
+body .page-container .nav-tabs li a,
+body .Detail_tabsView .job_search_quickview_content .tabbable > .nav-tabs > li > a {
+    background: white !important;
+    border: 0;
+    border-bottom-width: 3px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: transparent !important;
+    font-weight: 700;
+}
+
+body .page-container .nav-tabs li.active a,
+body .Detail_tabsView .job_search_quickview_content .tabbable > .nav-tabs > li.active > a {
+    border-bottom-color: var(--header-hover) !important;
+    color: var(--header-hover) !important;
+    background-color: #fff !important;
+}
+
+    body .page-container .nav-tabs li.active a i::before {
+        color: var(--header-hover) !important;
+    }
+
+/* Filter */
+body .dataFilter_Dropdown.open > .dropdown-toggle,
+body #dataFilter_Dropdown.dropdown-toggle:hover,
+body #dataFilter_Dropdown.dropdown-toggle:focus {
+    color: var(--weone-sub) !important;
+    border-color: var(--weone-sub);
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}
+
+body .quickSearch:not(.advanced_search_bar) label:before {
+    color: var(--weone-sub);
+}
+
+body .dataFilter_Dropdown_target .dataFilter_Dropdown_close:hover {
+    color: var(--weone-sub) !important;
+    border-color: var(--weone-sub) !important;
+}
+
+body .dataFilter_Dropdown_target .dataFilter_Dropdown_close {
+    color: #757575 !important;
+}
+/* admin */
+.module-item-inner a:hover {
+    color: #fff;
+}
+
+/* sidebar */
+body .page-sidebar > .sidebar-menu > li > a,
+body .page-sidebar > .sidebar-menu > li > a:hover,
+body .page-sidebar > .sidebar-menu > li > a:focus {
+    background-color: #fff !important;
+}
+
+body .page-sidebar > .sidebar-menu > li > a {
+    color: #212528 !important;
+    cursor: pointer;
+}
+
+
+body .page-sidebar .sidebar-menu > li > .submenu .menu-expand {
+    color: #999999 !important;
+}
+
+body .page-sidebar .sidebar-menu > li > .submenu > li > .submenu > li > a:hover {
+    color: var(--header-hover);
+}
+
+body .page-sidebar .sidebar-menu > li > a .menu-text {
+    max-width: calc(100% - 54px);
+}
+
+body .page-sidebar .sidebar-menu .submenu li.active > a,
+body .page-sidebar .sidebar-menu .submenu li.active > a i {
+    color: var(--viettel-primary-color) !important;
+}
+/* dock */
+.toggle_dock {
+    background: var(--weone-sub);
+}
+/* table */
+body .table thead tr, body .table thead tr th {
+    border-color: #ddd !important;
+    background: #f5f6fa;
+    color: #444444;
+}
+
+body .table tbody tr td a:hover {
+    opacity: .6;
+}
+
+body input[type=checkbox]:checked ~ .text:before,
+body input[type=radio]:checked ~ .text:before,
+body input[type=checkbox] ~ .text:hover:before,
+body input[type=radio] ~ .text:hover:before,
+body .table thead tr th input[type=checkbox]:checked ~ .text:before,
+body .table thead tr th input[type=radio]:checked ~ .text:before {
+    border-color: var(--viettel-primary-color) !important;
+}
+
+body .table thead tr th input[type=checkbox] ~ .text:before,
+body .table thead tr th input[type=radio] ~ .text:before {
+    border-color: #c8c8c8;
+}
+
+body input[type=checkbox].colored-success:checked ~ .text:before,
+body input[type=radio].colored-success:checked ~ .text:before {
+    border-color: #53a93f !important;
+    color: #53a93f !important;
+}
+
+body input[type=checkbox] ~ .text:before,
+body input[type=radio] ~ .text:before {
+    color: var(--weone-sub);
+}
+
+body input[type=checkbox].checkbox-slider.colored-blue.slider-icon:checked ~ .text:after,
+body input[type=checkbox].checkbox-slider.colored-blue.slider-icon ~ .text:after {
+    color: var(--weone-sub);
+}
+
+/* pagination */
+body .pagination > .active > a,
+body .pagination > .active > span,
+body .pagination > .active > a:hover,
+body .pagination > .active > span:hover,
+body .pagination > .active > a:focus,
+body .pagination > .active > span:focus {
+    background-color: var(--weone-sub) !important;
+    border-color: var(--weone-sub) !important;
+}
+
+body .dataTables_paginate .pagination li.active a {
+    background-color: var(--viettel-color-text) !important;
+    border-color: var(--viettel-color-text) !important;
+}
+/* hrm */
+body[id*="body-hrm"] {
+}
+
+    body[id*="body-hrm"] table a:not(.btn) {
+        color: var(--weone-sub) !important;
+    }
+
+.widget-header > .widget-caption:not(.tabitem) {
+    text-transform: none !important;
+    color: #000 !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.widget > .widget-header > .widget-caption i {
+    display: none;
+}
+
+body[id*="body-hrm"] .pagination > .active > a,
+body[id*="body-hrm"] .pagination > .active > span,
+body[id*="body-hrm"] .pagination > .active > a:hover,
+body[id*="body-hrm"] .pagination > .active > span:hover,
+body[id*="body-hrm"] .pagination > .active > a:focus,
+body[id*="body-hrm"] .pagination > .active > span:focus {
+    background-color: var(--weone-sub) !important;
+    border-color: var(--weone-sub) !important;
+}
+
+
+body[id*="body-hrm"] .btn + .btns {
+    display: inline-block;
+}
+
+    body[id*="body-hrm"] .btn + .btns > .btn-group {
+        margin-top: 0;
+    }
+
+/* file upload */
+body .fileitem a,
+body .fileitem .text-blue {
+    color: var(--weone-sub) !important;
+}
+
+
+/* QLKD */
+body[id*="body-qlkd"] table a:not(.btn) {
+    color: var(--weone-sub) !important;
+}
+
+body .borderInput {
+    border: 1px solid var(--weone-sub);
+}
+
+body .bg-info {
+    background-color: var(--weone-sub) !important;
+}
+
+/* QLMS */
+body[id*="body-qlms"] table a:not(.btn) {
+    color: var(--weone-sub) !important;
+}
+
+body[id*="body-qlms"] .widget-caption-right .widget-mainCaption {
+    margin-bottom: 0 !important;
+    color: #1C1C1C !important;
+    line-height: 1.5 !important;
+    padding-top: 10px;
+}
+
+/* stg */
+body[id*="body-stg"] .sidebar_action_btn_content .btn.pri-red:not([disabled]) {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-stg"] .drag-drop-box .icon-upload {
+    color: var(--weone-main) !important;
+}
+
+body[id*="body-stg"] .nav-tabs > li.active > a,
+body[id*="body-stg"] .nav-tabs > li.active > a:hover,
+body[id*="body-stg"] .nav-tabs > li.active > a:focus {
+    border-top: 2px solid var(--viettel-primary-color);
+}
+
+    body[id*="body-stg"] .module-item .module-item-content .module-item-inner a .slideIco i:before,
+    body[id*="body-stg"] .DTTT.btn-group .dropdown-menu-right li a:hover > span,
+    body[id*="body-stg"] .DTTT.btn-group .dropdown-menu-right li a:hover,
+    body[id*="body-stg"] .DTTT.btn-group .dropdown-menu-right li a:focus,
+    body[id*="body-stg"] .important_action_btn li .btns .btn-group .dropdown-menu li a:hover,
+    body[id*="body-stg"] .important_action_btn li .btns .btn-group .dropdown-menu li a:focus,
+    body[id*="body-stg"] .file_button_action_list li .dropdown-menu li a:hover,
+    body[id*="body-stg"] .file_button_action_list li .dropdown-menu li a:focus,
+    body[id*="body-stg"] .btnNext a,
+    body[id*="body-stg"] .btnPrev a,
+    body[id*="body-stg"] #DocumentVersions .quickView,
+    body[id*="body-stg"] table a:not(.btn),
+    body[id*="body-stg"] #upload-modal .browse-btn{
+        color: var(--viettel-primary-color) !important;
+    }
+
+body[id*="body-stg"] .label-group-tab.label_group_tab_custom .tabitem.active {
+    color: var(--weone-sub) !important;
+    border-bottom: 2px solid var(--weone-sub);
+}
+
+body[id*="body-stg"] .modal-header {
+    background-color: var(--weone-sub) !important;
+}
+
+/* QLCV */
+body[id*="body-qlcv"] .left_page__button--inner {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qlcv"] .btn-circle-light,
+body[id*="body-qlcv"] .left_page__category .category_item__body li:hover a,
+body[id*="body-qlcv"] .left_page__category .category_item__header,
+body[id*="body-qlcv"] .left_page__category .category_item__body li.active a {
+    color: var(--viettel-primary-color);
+}
+
+body[id*="body-qlcv"] .left_page__category .collapsed.panel-header {
+    color: #000;
+}
+
+body[id*="body-qlcv"] .btn-normal {
+    background-color: var(--viettel-primary-color);
+}
+body[id*="body-qlcv"] .btn-primary:focus,
+body[id*="body-qlcv"] .btn-primary,
+body[id*="body-qlcv"] .DTTT.btn-group > .btn-group:last-child > .btn:first-child {
+    background-color: #f5f5f5 !important;
+    color: #ec0100 !important;
+    border-color: #f5f5f5 !important;
+    box-shadow: none !important;
+}
+
+body[id*="body-qlcv"] .table thead > tr > th {
+    color: #444444 !important;
+    background-color: #f5f6fa !important;
+}
+
+body[id*="body-qlcv"] .left_page__button--inner > a:hover {
+    color: #fff;
+}
+
+body[id*="body-qlcv"] .content_page__board--inner .col_kanban .col_kanban__body .col_kanban__body--content {
+    color: #444 !important;
+}
+
+body[id*="body-qlcv"] .quickMoreKanban {
+    color: var(--weone-sub) !important;
+}
+
+
+body[id*="body-qlcv"] .nav_dropdown li a [class^=e-],
+body[id*="body-qlcv"] .pin_type_listwork.active span,
+body[id*="body-qlcv"] .pin_type_listwork.active span:before {
+    color: var(--weone-sub) !important;
+}
+
+body[id*="body-qlcv"] .nav_calendar .nav_calendar-view {
+    color: var(--header-hover);
+}
+
+    body[id*="body-qlcv"] .nav_calendar .nav_calendar-view.active {
+        background-color: var(--viettel-primary-color) !important;
+        color: #fff;
+    }
+
+body[id*="body-qlcv"] .table-box .table-row__header .table-cell {
+    color: #444444 !important;
+    background-color: #f5f6fa !important;
+}
+
+body[id*="body-qlcv"] .btn_edit_lbl:hover,
+body[id*="body-qlcv"] .btn_edit_lbl:focus,
+body[id*="body-qlcv"] .btn_edit_lbl:active {
+    color: var(--weone-sub) !important;
+}
+
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover {
+    background-color: #fff;
+}
+
+    body[id*="body-qlcv"] .link_accept_timeline,
+    body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover a,
+    body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover a:hover {
+        color: var(--weone-sub) !important;
+    }
+
+body[id*="body-qlcv"] .modal-header {
+    background-color: var(--weone-sub) !important;
+}
+
+body[id*="body-qlcv"] .box-tabs .tabs-item {
+    border-bottom: 2px solid transparent;
+}
+
+    body[id*="body-qlcv"] .box-tabs .tabs-item.active {
+        background-color: #fff;
+        border: 0;
+        border-bottom: 2px solid var(--weone-sub) !important;
+        color: var(--weone-sub);
+    }
+
+body[id*="body-qlcv"] .add_dowork-child .add_dowork-btn .box-popover .box-popover__inner a {
+    color: #444;
+}
+
+    body[id*="body-qlcv"] .add_dowork-child .add_dowork-btn .box-popover .box-popover__inner a:hover {
+        color: var(--weone-sub);
+    }
+
+body[id*="body-qlcv"] .btn-link {
+    color: var(--weone-sub);
+}
+
+body[id*="body-qlcv"] .qlcv_config_header,
+body[id*="body-qlcv"] .btn_search_filter {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qlcv"] .kanban-col__actions > a:hover {
+    color: #fff;
+}
+
+body[id*="body-qlcv"] .kanban-col__actions .add-col {
+    background-color: var(--weone-sub);
+}
+
+    body[id*="body-qlcv"] .kanban-col__actions .add-col:hover {
+        background-color: var(--weone-sub-dark);
+    }
+
+body[id*="body-qlcv"] .box_add-col__kanban--list {
+    border-color: #808080;
+}
+
+    body[id*="body-qlcv"] .box_add-col__kanban--list > a {
+        color: #444;
+    }
+
+body[id*="body-qlcv"] .nav-group .box-edit__group .box-edit__group--link:hover,
+body[id*="body-qlcv"] .nav-group .box-edit__group .box-edit__group--link:focus,
+body[id*="body-qlcv"] .nav-group .box-edit__group .box-edit__group--link:active,
+body[id*="body-qlcv"] .nav-group .link-actions:hover,
+body[id*="body-qlcv"] .nav-group .link-actions:focus,
+body[id*="body-qlcv"] .nav-group .link-actions:active {
+    background-color: var(--weone-sub);
+    border: 1px solid var(--weone-sub);
+}
+
+body[id*="body-qlcv"] .btn_search-icon {
+    background-color: var(--weone-sub);
+}
+
+body[id*="body-qlcv"] .col-actions .chatbox_cmt .nametime_cmt .name_cmt {
+    color: var(--weone-sub);
+}
+
+body[id*="body-qlcv"] .actions_dropdown__list--icon li button span,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li input span,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li a span {
+    color: #8e8280;
+}
+
+body[id*="body-qlcv"] .actions_dropdown__list--icon li .link-more__icon:hover:after,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li .link-more__icon:focus:after,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li .link-more__icon:active:after,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover button,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover input,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover a,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover button span,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover input span,
+body[id*="body-qlcv"] .actions_dropdown__list--icon li:hover a span {
+    color: var(--weone-sub);
+}
+
+/* QTTT */
+body[id*="body-qttt"] .statistical-top:after {
+    background: var(--weone-main);
+}
+
+body[id*="body-qttt"] .statistical-tbl__header .view-more__count a {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] table a:not(.btn) {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .procedure-body .procedure-body__col .procedure-body__item .procedure-body--icon {
+    color: var(--viettel-primary-color) !important;
+    background-color: rgba(0,0,0,.075);
+}
+
+body[id*="body-qttt"] .procedure-body .procedure-body__col .procedure-body__item a {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .fa-bookmark.blue.feature-icon {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .wizard ul li.active .step {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .fa-bookmark.blue.feature-icon {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .wizard ul li.active .step {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .ui-dialog .tab-pane .nav-tabs li.active a,
+body[id*="body-qttt"] .ui-dialog .tabbable .nav-tabs li.active a {
+    border-bottom-color: var(--viettel-primary-color);
+    color: var(--viettel-primary-color) !important;
+    background-color: #fff;
+}
+
+body[id*="body-qttt"] .resize__po--a a {
+    color: #939ba2 !important;
+}
+
+/*body[id*="body-qttt"] .DTTT.btn-group .btn:not(.quickDeletes):hover,
+body[id*="body-qttt"] .DTTT.btn-group .btn:not(.quickDeletes):focus {
+    background-color: var(--viettel-primary-color) !important;
+}*/
+
+body[id*="body-qttt"] .regis-update .tab-content {
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+body[id*="body-qttt"] .btn-link {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .simple-files .member a {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .page-body .databox .databox-left {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .page-body .databox .databox-right .databox-text.title a {
+    color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] .page-sidebar .sidebar-menu > li .btn-highlight[data-custom-class="registerFormFieldDialog"] {
+    background-color: var(--viettel-primary-color) !important;
+}
+
+body[id*="body-qttt"] [data-custom-class="registerFormFieldDialog"] i {
+    display: none;
+}
+
+body[id*="body-qttt"] [data-custom-class="registerFormFieldDialog"] .menu-text {
+    max-width: 100%;
+    margin: 0 auto !important;
+    display: block;
+    text-align: center;
+}
+
+body[id*="body-qttt"] .statistical-top .statistical-row .statistical-row__list .statistical-row__col .statistical-top__item {
+    box-shadow: 3px 3px 0px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+}
+
+/* MENU ICON CÁC PHÂN HỆ */
+.nav-cat > a.dropdown-toggle {
+    position: relative;
+}
+
+    .nav-cat > a.dropdown-toggle:after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+        border-top: 2px solid #fff;
+        padding-top: 5px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .nav-cat > a.dropdown-toggle svg {
+        display: none;
+    }
+
+    .nav-cat > a.dropdown-toggle:before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+.dataTables_filter #dataFilter_Dropdown i:after {
+    content: "";
+    width: 8px;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    background: #858585;
+    margin-top: 3px;
+}
+
+.dataTables_filter #dataFilter_Dropdown i:before {
+    content: "";
+    width: 14px;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    background: #858585;
+    margin-top: 4px;
+}
+
+
+.dataTables_filter #dataFilter_Dropdown i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: #858585;
+    margin-top: -8px;
+}
+
+.heading-page .title-block,
+.widget-caption-right .widget-mainCaption,
+.widget-header > .widget-caption:not(.tabitem),
+body[id*="body-qlcv"] .hding_page,
+.statistical-tbl__header .title-block {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+}
+
+.bnt[data-target="#ExportExcel"],
+#saveRegisterFormExport,
+body[id*="body-hrm"] .quickExport.btn.btn-info:not([disabled]),
+body[id*="body-qlms"] .quickExportExcel.btn.btn-primary:not([disabled]),
+body .quickExportExcelCus.btn.btn-info:not([disabled]) {
+    background-color: #f5f5f5 !important;
+    color: #ec0100 !important;
+}
+
+body .dataFilter_Dropdown.open > .dropdown-toggle i,
+body .dataFilter_Dropdown.open > .dropdown-toggle i:before,
+body .dataFilter_Dropdown.open > .dropdown-toggle i:after,
+body #dataFilter_Dropdown.dropdown-toggle:hover i,
+body #dataFilter_Dropdown.dropdown-toggle:hover i:before,
+body #dataFilter_Dropdown.dropdown-toggle:hover i:after,
+body #dataFilter_Dropdown.dropdown-toggle:focus i,
+body #dataFilter_Dropdown.dropdown-toggle:focus i:before,
+body #dataFilter_Dropdown.dropdown-toggle:focus i:after {
+    background-color: var(--weone-sub) !important;
+}
+
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a .badge {
+    background-color: #363132 !important;
+}
+
+
+
+/*table icon */
+
+.table thead tr .sortitem_th .sortitem .clickSort:before, .table thead tr .sortitem_th .sortitem .clickSort > i,
+.sortitem_th .sortitem .clickSort:before,
+.table thead tr th i.fa.fa-arrow-up,
+.table thead tr th .sortitem_th .sortitem .clickSort > i:before,
+#upload-modal .icon-upload i.fa-cloud-upload,
+i.fa.fa-fw.fa-envelope.blue,
+i.fa.fa-fw.fa-user.blue,
+.table > tbody > tr > td > .text-truncate .fa.blue {
+    color: var(--viettel-color-text) !important;
+}
+
+/*scrollbar */
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: red;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #cfcfcf;
+    border-radius: 8px;
+    border: 2px solid #cfcfcf;
+}
+
+.page_euro .euro_box,
+.page_euro .euro_box h1,
+.page_euro .euro_box h3,
+.page_euro .euro_box h4 {
+    color: initial !important;
+}
+.page_euro .return-btn, .page_euro .return-btn:hover {
+    color: var(--viettel-primary-color);
+    background-color: #f5f5f5 !important;
+}

@@ -1,0 +1,457 @@
+// Color system
+$primary-1: #00689D !default;
+$primary-2: #D93E34 !default;
+$red-1 : #C12323;
+$body-color: #000 !default;
+
+$white:    #fff !default;
+$black:    #000;
+$black-1: #212529;
+$black-2 :#333333;
+$black-3 :#1C1C1C;
+$gray-1: #F5F5F5 !default;
+$gray-2: #F0F0F0 !default;
+$gray-3: #CCCCCC !default;
+$gray-4: #999999 !default;
+$gray-5: #adb5bd !default;
+$gray-6 : #DDDDDD !default;
+$gray-7 : #F5F6FA!default;
+$gray-8 :#444444;
+
+//backgroud-color
+$bg-gray :#939BA2;
+
+$bg-body: #F5F6FA !default;
+$text-placeholder: #939BA2 !default;
+$text-input: #333333 !default;
+
+
+$blue:    #3AA3FF !default;
+$blue-2:  #59D2EA !default;
+$blue-3: #0639BA;
+$blue-4 : #007BFF;
+$green:  #28A745;
+$green-1:#18B241;
+$dark-green:  #28A745;
+$dark-blue:    #2A425D;
+$dark-red:     #C94840;
+$dark-red-1 : #D95C34;
+$dark-gray:#6C757D;
+$orange:  #E68410;
+$yellow:  #FFC750;
+$yellow-1:#F8B425;
+$yellow-2: #F8B300;
+
+$purple-1: #7300CE;
+//Mono color
+$pri-blue-1: #004160 !default;
+$pri-blue-2: #00567F !default;
+$pri-blue-3: #006A9D !default;
+$pri-blue-4: #0094DC !default;
+$pri-blue-5: #08ACFB !default;
+$pri-blue-6: #D9EFFA;
+$pri-orange: #FA8532 !default;
+$dark-coban: #738A9F !default;
+$dark-green: #289374 !default;
+
+$text-body: #1C1C1C !default;
+
+//font
+$font-family-base: 'Roboto', sans-serif !default;
+$font-family-icons: 'doceyes' !default;
+$font-size-base: 13px !default;
+$font-size-small: 10px !default;
+$line-height-base: 21px !default;
+$body-color: $black-1 !default;
+$font-weight-base: 400 !default;
+
+//size icon font
+$font-size-icon-1: 16px !default;
+$font-size-icon-2: 24px !default;
+
+
+//body background
+$body-bg: $white;
+
+//link
+$link-color: $primary-1 !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+
+//margin-bottom
+$paragraph-margin-bottom:   $font-size-base !default;
+$heading-margin-bottom:   $font-size-base * 2 !default;
+
+
+//height header page
+$heigh-header-page: 50px !default;
+$width-left-page: 250px !default;
+
+//box shadow popup
+$box-shadow-popup: 0px 4px 8px rgba(0, 0, 0, 0.16) !default;
+
+//boder color
+$border-color:  #e5e5e5 !default;
+
+//background color when hover left item category
+$bg-color-left-item-category: #F8FCFF;
+.light-blue {
+    background-color: $pri-blue-5;
+}
+
+.medium-blue {
+    background-color: $pri-blue-4;
+}
+
+.heavy-blue {
+    background-color: $primary-1;
+}
+
+.dark-blue {
+    background-color: $pri-blue-2;
+}
+
+.pri-green {
+    background-color: $dark-green;
+}
+
+.pri-red {
+    background-color: $primary-2;
+}
+
+.pri-yellow {
+    background-color: $yellow-1;
+}
+
+.pri-orange {
+    background-color: $pri-orange;
+}
+
+.pri-purple {
+    background-color: $purple-1;
+}
+
+.dark-orange {
+    background-color: $dark-red-1;
+}
+
+.dark-coban {
+    background-color: $dark-coban;
+}
+
+.pre-gray {
+    background-color: $dark-gray;
+}
+
+.dark-green {
+    background-color: $dark-green;
+}
+
+
+// Class color
+.color-light-blue {
+    color: $pri-blue-5;
+}
+
+.color-medium-blue {
+    color: $pri-blue-4;
+}
+
+.color-heavy-blue {
+    color: $primary-1;
+}
+
+.color-dark-blue {
+    color: $pri-blue-2;
+}
+
+.color-pri-green {
+    color: $dark-green;
+}
+
+.color-pri-red {
+    color: $primary-2;
+}
+
+.color-pri-yellow {
+    color: $yellow-1;
+}
+
+.color-pri-orange {
+    color: $pri-orange;
+}
+
+.color-pri-purple {
+    color: $purple-1;
+}
+
+.color-dark-orange {
+    color: $dark-red-1;
+}
+
+
+.color-dark-coban {
+    color: $dark-coban;
+}
+
+.color-pre-gray {
+    color: $dark-gray;
+}
+
+.color-dark-green {
+    color: $dark-green;
+}
+// Color system
+$primary-1: #00689D !default;
+$primary-2: #D93E34 !default;
+$body-color: #000 !default;
+$pri-color: #0094DC !default;
+$second-color: #D93E34 !default;
+$sub-color: #0094DC !default;
+$white: #fff !default;
+$black: #000 !default;
+$text-body: #1C1C1C !default;
+$bg-body: #F5F6FA !default;
+$text-input: #333333 !default;
+$text-placeholder: #939BA2 !default;
+$text-disabled: #6C757D !default;
+$input-disabled: #E9ECEF !default;
+$white: #fff !default;
+$black: #000;
+$gray-1: #F5F5F5 !default;
+$gray-2: #F0F0F0 !default;
+$gray-3: #CCCCCC !default;
+$yellow:  #FFC750;
+$green:  #3DC947;
+$gray-4: #d4d4d4 !default;
+$gray-5: #adb5bd !default;
+$blue: #3AA3FF !default;
+$orange:  #E68410;
+$blue-2: #59D2EA !default;
+$green: #3DC947;
+$dark-red: #C94840;
+$orange: #E68410;
+$yellow: #FFC750;
+
+// Color palette
+$light-blue: #08ACFB !default;
+$medium-blue: #0094DC !default;
+$heavy-blue: #1a6ab3 !default;
+$dark-blue: #00567F !default;
+$pri-green: #3db758 !default;
+$pri-red: #D93E34 !default;
+$pri-orange: #FA8532 !default;
+$pri-purple: #7300CE !default;
+$pri-yellow: #F8B425 !default;
+$dark-orange: #D95C34 !default;
+$dark-coban: #738A9F !default;
+$pre-gray: #6C757D !default;
+$dark-green: #2aaf47 !default;
+$primary-1: #00689D !default;
+$pre-gray-1: #DDDDDD !default;
+
+
+//Mono color
+$pri-blue-1: #004160 !default;
+$pri-blue-2: #00567F !default;
+$pri-blue-3: #006A9D !default;
+$pri-blue-4: #0094DC !default;
+$pri-blue-5: #08ACFB !default;
+
+//font
+$font-family-base: 'Roboto', sans-serif !default;
+$font-family-icons: 'l-ione' !default;
+$font-size-base: 13px !default;
+$font-size-small: 10px !default;
+$line-height-base: $font-size-base * 1.5 !default;
+$font-weight-base: 400 !default;
+
+//size icon font
+$font-size-icon-1: 16px !default;
+$font-size-icon-2: 24px !default;
+
+//link
+$link-color: $pri-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+
+
+//height header page
+$heigh-header-page: 45px !default;
+$width-left-page: 250px !default;
+
+//box shadow popup
+$box-shadow-popup: 0px 4px 8px rgba(0, 0, 0, 0.16) !default;
+
+//border-color
+$border-color: #e5e5e5 !default;
+$border-color-table: #f0f0f0 !default;
+
+
+// Class Background color
+.light-blue {
+    background-color: $light-blue;
+}
+
+.medium-blue {
+    background-color: $medium-blue;
+}
+
+.heavy-blue {
+    background-color: $heavy-blue;
+}
+
+.dark-blue {
+    background-color: $dark-blue;
+}
+
+.pri-green {
+    background-color: $pri-green;
+}
+
+.pri-red {
+    background-color: $pri-red;
+}
+
+.pri-yellow {
+    background-color: $pri-yellow;
+}
+
+.pri-orange {
+    background-color: $pri-orange;
+}
+
+.pri-purple {
+    background-color: $pri-purple;
+}
+
+.dark-orange {
+    background-color: $dark-orange;
+}
+
+.dark-coban {
+    background-color: $dark-coban;
+}
+
+.pre-gray {
+    background-color: $pre-gray;
+}
+
+.dark-green {
+    background-color: $dark-green;
+}
+
+
+// Class color
+.color-light-blue {
+    color: $light-blue;
+}
+
+.color-medium-blue {
+    color: $medium-blue;
+}
+
+.color-heavy-blue {
+    color: $heavy-blue;
+}
+
+.color-dark-blue {
+    color: $dark-blue;
+}
+
+.color-pri-green {
+    color: $pri-green;
+}
+
+.color-pri-red {
+    color: $pri-red;
+}
+
+.color-pri-yellow {
+    color: $pri-yellow;
+}
+
+.color-pri-orange {
+    color: $pri-orange;
+}
+
+.color-pri-purple {
+    color: $pri-purple;
+}
+
+.color-dark-orange {
+    color: $dark-orange;
+}
+
+.color-dark-coban {
+    color: $dark-coban;
+}
+
+.color-pre-gray {
+    color: $pre-gray;
+}
+
+.color-dark-green {
+    color: $dark-green;
+}
+
+
+
+// Class Margin, Padding
+.mt {
+    &-10 {
+        margin-top: 10px;
+    }
+
+    &-20 {
+        margin-top: 20px;
+    }
+
+    &-30 {
+        margin-top: 20px;
+    }
+}
+
+.mb {
+    &-10 {
+        margin-bottom: 10px;
+    }
+
+    &-20 {
+        margin-bottom: 20px;
+    }
+
+    &-30 {
+        margin-bottom: 20px;
+    }
+}
+
+.pt {
+    &-10 {
+        padding-top: 10px;
+    }
+
+    &-20 {
+        padding-top: 20px;
+    }
+
+    &-30 {
+        padding-top: 20px;
+    }
+}
+
+.pb {
+    &-10 {
+        padding-bottom: 10px;
+    }
+
+    &-20 {
+        padding-bottom: 20px;
+    }
+
+    &-30 {
+        padding-bottom: 20px;
+    }
+}

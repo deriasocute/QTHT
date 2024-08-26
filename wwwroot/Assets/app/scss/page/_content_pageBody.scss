@@ -1,0 +1,28 @@
+.fsi_group_chart {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+}
+.page-container {
+    background: none !important;
+
+}
+.page-body {
+    background: none !important;
+}
+.morris-hover.morris-default-style{
+    z-index: 9 !important;
+}
+
+.nav-cat  {
+    .nav_dropdown li a span {
+        display: block !important;
+        position: static !important;
+        font-size: 13px;
+        color: #1c1c1c !important;
+
+    }
+}

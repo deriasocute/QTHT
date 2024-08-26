@@ -1,0 +1,178 @@
+// badges status
+.badges {
+    background-color: $border-color-table;
+    height: 23px;
+    font-size: $font-size-base - 2;
+    font-weight: 600;
+    display: inline-block;
+    width: 102px;
+    padding: 0 4px;
+    overflow: hidden;
+    border-radius: 4px;
+
+    & > span {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.dark {
+    &-request {
+        background-color: $pri-yellow;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-accept {
+        background-color: $pri-green;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-refuse {
+        background-color: $second-color;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-reject {
+        background-color: $pre-gray;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-waiting {
+        background-color: $medium-blue;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-processing {
+        background-color: $heavy-blue;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-warning {
+        background-color: $pri-orange;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-success {
+        background-color: $dark-green;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+
+    &-danger {
+        background-color: $pri-red;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+            color: $white !important;
+        }
+    }
+}
+
+.light {
+	&-request {
+		background-color: rgba($color: $pri-yellow, $alpha: 0.2);
+        color: darken($pri-yellow, 15%);
+        
+
+        &:hover, &:focus, &:active {
+            color: darken($pri-yellow, 15%);
+        }
+	}
+	&-accept {
+		background-color: rgba($color: $pri-green, $alpha: 0.2);
+        color: darken($pri-green, 15%);
+
+        &:hover, &:focus, &:active {
+            color: darken($pri-green, 15%);
+        }
+	}
+	&-refuse {
+		background-color: rgba($color: $second-color, $alpha: 0.2);
+		color: $second-color;
+
+        &:hover, &:focus, &:active {
+            color: $second-color;
+        }
+	}
+	&-reject {
+		background-color: rgba($color: $pre-gray, $alpha: 0.2);
+        color: darken($pre-gray, 15%);
+
+        &:hover, &:focus, &:active {
+            color: darken($pre-gray, 15%);
+        }
+	}
+	&-waiting {
+		background-color: rgba($color: $medium-blue, $alpha: 0.2);
+        color: darken($medium-blue, 15%);
+
+        &:hover, &:focus, &:active {
+            color: darken($medium-blue, 15%);
+        }
+	}
+	&-processing {
+		background-color: rgba($color: $dark-blue, $alpha: 0.2);
+        color: darken($heavy-blue, 15%);
+
+        &:hover, &:focus, &:active {
+            color: darken($heavy-blue, 15%);
+        }
+	}
+	&-warning {
+		background-color: rgba($color: $pri-orange, $alpha: 0.2);
+        color: darken($pri-orange, 5%);
+
+        &:hover, &:focus, &:active {
+            color: darken($pri-orange, 5%);
+        }
+	}
+	&-success {
+		background-color: rgba($color: $dark-green, $alpha: 0.2);
+        color: darken($dark-green, 5%);
+
+        &:hover, &:focus, &:active {
+            color: darken($dark-green, 5%);
+        }
+	}
+	&-danger {
+		background-color: rgba($color: $pri-red, $alpha: 0.2);
+		color: $pri-red;
+
+        &:hover, &:focus, &:active {
+            color: $pri-red;
+        }
+	}
+}

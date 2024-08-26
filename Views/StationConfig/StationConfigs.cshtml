@@ -1,0 +1,68 @@
+﻿@model QTHT.Models.View.StationConfigModel
+@{
+    var listStation = Model.StationConfigs;
+    var listPump = Model.Devices;
+}
+<div class="table-responsive over_auto">
+    <table id="StationConfig" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
+        <thead>
+            <tr role="row">
+                <th class="wpx60 center" tabindex="0">STT</th>
+                <th class="wpx60 center" tabindex="0">
+                    <label>
+                        <input class="group-checkable" type="checkbox" />
+                        <span class="text"></span>
+                    </label>
+                </th>
+                <th class="wpx250 " tabindex="0">Mã trạm</th>
+                <th class="wpx250" tabindex="0" aria-controls="searchable">Mã máy bơm</th>
+                <th class="wauto" tabindex="0" aria-controls="searchable">Vị trí</th>
+                <th class="wpx150 txtct" tabindex="0" aria-controls="searchable">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var stt = 0;
+                foreach (var item in listStation)
+                {
+                    stt++;
+                    <tr role="row">
+                        <td class="sorting_1 center">@stt</td>
+                        <td class="sorting_1 center">
+                            <label>
+                                <input data-id="@item.ID" class="checkboxes" type="checkbox" />
+                                <span class="text"></span>
+                            </label>
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@{
+                                var pumpName = listPump.FirstOrDefault(n => n.ID == item.DeviceID);
+                                if (pumpName != null)
+                                {
+                                    @pumpName.Name;
+                                }
+                                else
+                                {
+                                    @("Không xác định");
+                                }
+                            }
+                        </td>
+                        <td>@item.Address</td>
+                        <td>
+                            
+                            <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editStationConfig-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xs quickDelete" data-toggle="ajax-modal" data-target="@("deleteStationConfig-"+item.ID)" data-url="@Url.Action("Delete")/@item.ID">
+                            <i class="fa fa-trash-o"></i>
+                            </button>
+                            @*<a class="btn btn-danger btn-xs quickDelete" data-id="@item.ID" data-target=".ui-dialog:visible" title="Xóa" href="/">
+                                <i class="fa fa-trash-o"></i>
+                            </a>*@
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

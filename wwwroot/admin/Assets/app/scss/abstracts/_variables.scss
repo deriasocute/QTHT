@@ -1,0 +1,402 @@
+// Color system
+$primary-1: #00689D !default;
+$primary-2: #D93E34 !default;
+$body-color: #000 !default;
+$pri-color: #0094DC !default;
+$second-color: #D93E34 !default;
+$sub-color: #0094DC !default;
+$white: #fff !default;
+$black: #000 !default;
+$text-body: #1C1C1C !default;
+$bg-body: #F5F6FA !default;
+$text-input: #333333 !default;
+$text-placeholder: #939BA2 !default;
+$text-disabled: #6C757D !default;
+$input-disabled: #E9ECEF !default;
+$white: #fff !default;
+$black: #000;
+$gray-1: #F5F5F5 !default;
+$gray-2: #F0F0F0 !default;
+$gray-3: #CCCCCC !default;
+$yellow:  #FFC750;
+$green:  #3DC947;
+$gray-4: #d4d4d4 !default;
+$gray-5: #adb5bd !default;
+$blue: #3AA3FF !default;
+$orange:  #E68410;
+$blue-2: #59D2EA !default;
+$green: #3DC947;
+$dark-red: #C94840;
+$orange: #E68410;
+$yellow: #FFC750;
+
+// Color palette
+$light-blue: #08ACFB !default;
+$medium-blue: #0094DC !default;
+$heavy-blue: #1a6ab3 !default;
+$dark-blue: #00567F !default;
+$pri-green: #3db758 !default;
+$pri-red: #D93E34 !default;
+$pri-orange: #FA8532 !default;
+$pri-purple: #7300CE !default;
+$pri-yellow: #F8B425 !default;
+$dark-orange: #D95C34 !default;
+$dark-coban: #738A9F !default;
+$pre-gray: #6C757D !default;
+$dark-green: #2aaf47 !default;
+$primary-1: #00689D !default;
+$pre-gray-1: #DDDDDD !default;
+
+
+//Mono color
+$pri-blue-1: #004160 !default;
+$pri-blue-2: #00567F !default;
+$pri-blue-3: #006A9D !default;
+$pri-blue-4: #0094DC !default;
+$pri-blue-5: #08ACFB !default;
+
+//font
+$font-family-base: 'Inter','Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-icons: 'l-ione' !default;
+$font-size-base: 13px !default;
+$font-size-small: 10px !default;
+$line-height-base: $font-size-base * 1.5 !default;
+$font-weight-base: 400 !default;
+
+//size icon font
+$font-size-icon-1: 16px !default;
+$font-size-icon-2: 24px !default;
+
+//body background
+$body-bg: $white;
+
+//link
+$link-color: $pri-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+//margin-bottom
+$paragraph-margin-bottom: $font-size-base !default;
+$heading-margin-bottom: $font-size-base * 2 !default;
+
+//height header page
+$heigh-header-page: 45px !default;
+$width-left-page: 250px !default;
+
+//box shadow popup
+$box-shadow-popup: 0px 4px 8px rgba(0, 0, 0, 0.16) !default;
+
+//border-color
+$border-color: #e5e5e5 !default;
+$border-color-table: #f0f0f0 !default;
+
+
+// Class Background color
+.light-blue {
+    background-color: $light-blue;
+}
+
+.medium-blue {
+    background-color: $medium-blue;
+}
+
+.heavy-blue {
+    background-color: $heavy-blue;
+}
+
+.dark-blue {
+    background-color: $dark-blue;
+}
+
+.pri-green {
+    background-color: $pri-green;
+}
+
+.pri-red {
+    background-color: $pri-red;
+}
+
+.pri-yellow {
+    background-color: $pri-yellow;
+}
+
+.pri-orange {
+    background-color: $pri-orange;
+}
+
+.pri-purple {
+    background-color: $pri-purple;
+}
+
+.dark-orange {
+    background-color: $dark-orange;
+}
+
+.dark-coban {
+    background-color: $dark-coban;
+}
+
+.pre-gray {
+    background-color: $pre-gray;
+}
+
+.dark-green {
+    background-color: $dark-green;
+}
+
+
+
+
+.blue-2 {
+    background-color: #2980b9;
+}
+
+.dark-pink {
+    background-color: #b04284;
+}
+
+.light-pink {
+    background-color: #e75b8d;
+}
+
+.green-3 {
+    background-color: #3fa3ba;
+}
+
+.gray-3 {
+    background-color: #34495e;
+}
+
+
+
+// Class color
+.color-light-blue {
+    color: $light-blue;
+}
+
+.color-medium-blue {
+    color: $medium-blue;
+}
+
+.color-heavy-blue {
+    color: $heavy-blue;
+}
+
+.color-dark-blue {
+    color: $dark-blue;
+}
+
+.color-pri-green {
+    color: $pri-green;
+}
+
+.color-pri-red {
+    color: $pri-red;
+}
+
+.color-pri-yellow {
+    color: $pri-yellow;
+}
+
+.color-pri-orange {
+    color: $pri-orange;
+}
+
+.color-pri-purple {
+    color: $pri-purple;
+}
+
+.color-dark-orange {
+    color: $dark-orange;
+}
+
+.color-dark-coban {
+    color: $dark-coban;
+}
+
+.color-pre-gray {
+    color: $pre-gray;
+}
+
+.color-dark-green {
+    color: $dark-green;
+}
+
+.green-4 {
+    background-color: #2980b9 !important;
+}
+
+.orange-2 {
+    background-color: #D2AC13;
+}
+
+.red-2 {
+    background-color: #d5405c;
+}
+
+.green-5 {
+    background-color: #8ba23a;
+    ;
+}
+
+
+// Class Margin, Padding
+.mt {
+    &-5 {
+        margin-top: 5px !important;
+    }
+
+    &-10 {
+        margin-top: 10px !important;
+    }
+
+    &-20 {
+        margin-top: 20px !important;
+    }
+
+    &-30 {
+        margin-top: 30px !important;
+    }
+}
+
+.mb {
+    &-5 {
+        margin-bottom: 5px !important;
+    }
+
+    &-10 {
+        margin-bottom: 10px !important;
+    }
+
+    &-20 {
+        margin-bottom: 20px !important;
+    }
+
+    &-30 {
+        margin-bottom: 30px !important;
+    }
+}
+
+.ml {
+    &-5 {
+        margin-left: 5px !important;
+    }
+
+    &-10 {
+        margin-left: 10px !important;
+    }
+
+    &-20 {
+        margin-left: 20px !important;
+    }
+
+    &-30 {
+        margin-left: 30px !important;
+    }
+}
+
+.mr {
+    &-5 {
+        margin-right: 5px !important;
+    }
+
+    &-10 {
+        margin-right: 10px !important;
+    }
+
+    &-20 {
+        margin-right: 20px !important;
+    }
+
+    &-30 {
+        margin-right: 30px !important;
+    }
+}
+
+.p-5 {
+    padding: 5px !important;
+}
+
+.pt {
+    &-15 {
+        padding-top: 5px !important;
+    }
+
+    &-10 {
+        padding-top: 10px !important;
+    }
+
+    &-20 {
+        padding-top: 20px !important;
+    }
+
+    &-30 {
+        padding-top: 30px !important;
+    }
+}
+
+.pb {
+    &-0 {
+        padding-bottom: 0 !important;
+    }
+
+    &-5 {
+        padding-bottom: 5px !important;
+    }
+
+    &-10 {
+        padding-bottom: 10px !important;
+    }
+
+    &-20 {
+        padding-bottom: 20px !important;
+    }
+
+    &-30 {
+        padding-bottom: 30px !important;
+    }
+}
+
+.pl {
+    &-0 {
+        padding-left: 0 !important;
+    }
+
+    &-5 {
+        padding-left: 5px !important;
+    }
+
+    &-10 {
+        padding-left: 10px !important;
+    }
+
+    &-20 {
+        padding-left: 20px !important;
+    }
+
+    &-30 {
+        padding-left: 30px !important;
+    }
+}
+
+.pr {
+    &-0 {
+        padding-right: 0 !important;
+    }
+
+    &-5 {
+        padding-right: 5px !important;
+    }
+
+    &-10 {
+        padding-right: 10px !important;
+    }
+
+    &-20 {
+        padding-right: 20px !important;
+    }
+
+    &-30 {
+        padding-right: 30px !important;
+    }
+}

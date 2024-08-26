@@ -1,0 +1,25 @@
+@mixin clear {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin text-truncate {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text-truncate {
+    @include text-truncate;
+}
+
+@for $i from 1 through 30 {
+    $width: 10 * $i;
+
+    .wpx#{$width} {
+        min-width: #{$width}px !important;
+    }
+}

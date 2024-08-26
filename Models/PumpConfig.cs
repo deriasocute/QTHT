@@ -6,5 +6,6 @@
         public int IdStation { get; set; }
         public bool State { get; set; }
         public string CodePump { get; set; }
+        public DateTime Realtime { get; set; } = DateTime.Now;
     }
 }

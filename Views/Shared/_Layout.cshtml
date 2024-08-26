@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -45,5 +45,152 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>*@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="layout-home no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Quản trị hệ thống</title>
+    <link type="image/x-icon" href="/img/logo.png" rel="shortcut icon">
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex">
+
+    <link href="/Assets/css/fonts.bundle.css?version=20240626033912" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="/Assets/bootstrap/css/bootstrap.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/bootstrap/css/bootstrap-theme.css?version=20240626033912" rel="stylesheet" />
+
+    <!-- Jquery -->
+    <link href="/Assets/jquery/css/jquery.ui.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/js/editors/summernote/summernote.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.cscrollbar.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.datetimepicker.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.jcrop.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.treegrid.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.lightbox.min.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.stacktable.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/jquery/css/jquery.bootstrap-select.css?version=20240626033912" rel="stylesheet" />
+
+    <!-- Beyond -->
+    <link href="/Assets/beyond/css/font-awesome.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/weather-icons.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/beyond.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/demo.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/typicons.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/animate.css?version=20240626033912" rel="stylesheet" />
+    <link href="/Assets/beyond/css/dataTables.bootstrap.css?version=20240626033912" rel="stylesheet" />
+
+    <!--<link href="/admin/pdf/css.css" rel="stylesheet"/>
+ -->
+    <!-- APP -->
+    <link href="/admin/Assets/app/css/ionicons.min.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/icons.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/main.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/size.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/stg.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/wf.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/cmt.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/ntfs.css?version=20240626033912" rel="stylesheet" />
+    <link href="/admin/Assets/app/css/cust.css?version=20240626033912" rel="stylesheet" />
+
+    <!--common v2-->
+    
+    <link href="/Assets/app/fonts/doceyes-icon.css?version=20240626033912" rel="stylesheet" />
+    
+    <link href="/Assets/app/font-icon/style.css?version=20240626033912" rel="stylesheet" />
+    
+    <link type="text/css" href="/Assets/vendors/custom/slick/slick.css?version=20240626033912" />
+    <link href="/admin/Assets/app/scss/main-compile.css?version=20240626033912" rel="stylesheet" />
+    <!-- fix_ie -->
+    <link href="/Assets/app/css/fix_ie.css?version=20240626033912" rel="stylesheet" />
+
+    <!-- component_module -->
+        <link href="/Assets/app/component_module/ThemeDefault/main_module.css?version=20240626033912" rel="stylesheet" />
+
+
+    
+    <script src="/Assets/app/js/pre-load.js?version=20240626033912"></script>
+  
+</head>
+<body id="body-admin-home-index" class="">
+    <partial name="Header" />
+    @RenderBody()
+
+    <div id="Overlay" class="overlay"><sub></sub></div>
+    
+
+
+    <!-- Jquery -->
+    <script src="/Assets/jquery/js/jquery.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.datetimepicker.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.contextMenu.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.dateformat.js?version=20240626033912"></script>
+
+    <script src="/Assets/jquery/js/jquery.ui.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.mousewheel.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.cscrollbar.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.jcrop.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.treegrid.js?version=20240626033912"></script>
+
+    <script src="/Assets/jquery/js/jquery.serializejson.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.rating.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.lightbox-plus-jquery.min.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.stacktable.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.simple.money.format.js?version=20240626033912"></script>
+    <script src="/Assets/app/js/dataPage.js?version=20240626033912"></script>
+
+    <!-- Bootstrap -->
+    <script src="/Assets/bootstrap/js/bootstrap.js?version=20240626033912"></script>
+    <script src="/Assets/jquery/js/jquery.bootstrap-select.js?version=20240626033912"></script>
+    <!--     <script src="/admin/pdf/js.js"></script>
+    -->
+    <!-- Beyond -->
+    <script src="/Assets/beyond/js/slimscroll/jquery.slimscroll.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/validation/bootstrapValidator.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/editors/summernote/summernote.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/editors/summernote/lang/summernote-vi-VN.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/nestable/jquery.nestable.min.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/easypiechart/jquery.easypiechart.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/easypiechart/easypiechart-init.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.resize.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.pie.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.tooltip.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.orderBars.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/charts/flot/jquery.flot.time.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/skins.js?version=20240626033912"></script>
+    <script src="/Assets/beyond/js/beyond.js?version=20240626033912"></script>
+
+    <!-- highstock -->
+    <script src="/Assets/jquery/js/jquery.highstock.js?version=20240626033912"></script>
+
+    <!-- APP -->
+    <script src="/admin/Assets/app/js/autocomplete.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/utils.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/main.js?version=20240626033912"></script>
+    <script src="/Assets/app/js/base.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/uploader.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/upfile.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/tree.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/admin.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/avatar.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/pages.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/test.js?version=20240626033912"></script>
+    <script src="/admin/Assets/app/js/cust.js?version=20240626033912"></script>
+
+    <!-- login -->
+
+    <!-- check-ie -->
+    <script src="/Assets/app/js/modernizr-custom.js?version=20240626033912"></script>
+    <script src="/Assets/app/js/check-ie-version.js?version=20240626033912"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using QTHT.Models.Data;
 
@@ -16,6 +17,16 @@ namespace QTHT
             builder.Services.AddDbContext<QTHTDataContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext")));
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(
+                options =>
+                {
+                    options.LoginPath = "/Users/Login";
+                    options.SlidingExpiration = true;
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                    options.AccessDeniedPath = "/Forbidden/";
+                });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,12 +41,12 @@ namespace QTHT
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=User}/{action=Login}/{id?}");
 
             app.Run();
         }

@@ -1,0 +1,151 @@
+﻿@{
+    //var CUser = (User)ViewBag.CUser;
+    //var isAdminNoRole = GlobalConfig.GetBoolSetting("IsAdminNoRole");
+    //var isAdminConfig = (isAdminNoRole && CUser.IsAdmin && CUser.IDChannel == 0);
+    var StationConfigs = ViewBag.StationConfigs != null ? (List<StationConfig>)ViewBag.StationConfigs : new List<StationConfig>();
+}
+<div class="sidebar-header-wrapper hidden">
+    <input type="text" class="searchinput" placeholder="Tìm kiếm" />
+    <i class="glyphicon orange glyphicon-search"></i>
+    <div class="searchhelper">Tìm kiếm</div>
+</div>
+<ul class="nav sidebar-menu useScrollBar left_page__category">
+    <li class="category_item">
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon glyphicon orange glyphicon-tasks"></i>
+            <span class="menu-text">Cấu hình hệ thống</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu">
+            <li>
+                <a href="/device/index">
+                    <i class="icon icon-circle_ouline icon-menuleft-circle"></i>
+                    <span class="menu-text">Cấu hình thiết bị</span>
+                </a>
+            </li>
+            <li>
+                <a href="/stationconfig/index">
+                    <i class="icon icon-circle_ouline icon-menuleft-circle"></i>
+                    <span class="menu-text">Cấu hình trạm bơm</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="category_item">
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon glyphicon orange glyphicon-list-alt"></i>
+            <span class="menu-text">Nhật ký hệ thống</span>
+            <i class="menu-expand"></i>
+        </a>
+        <div class="submenu">
+            <div class="searchLeftbar">
+                <input class="form-control input-sm" type="text" id="searchBox" placeholder="Tìm kiếm" onkeyup="filterMenu()">
+                <i class="seachIconLeftbar glyphicon glyphicon-search"></i>
+            </div>
+            <ul class="submenu max-h-375px overflow-y">
+                @foreach(var item in StationConfigs)
+                {
+                <li class="menu-items">
+                    <a href="/stationconfig/details/@item.ID">
+                        <i class="icon icon-circle_ouline icon-menuleft-circle"></i>
+                        <span class="menu-text">@item.Name</span>
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+    </li>
+    <li class="category_item">
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon orange ionicons ion-android-contact"></i>
+            <span class="menu-text">Tài khoản hệ thống</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu">
+            <li>
+                <a href="/user/index">
+                    <i class="icon icon-circle_ouline icon-menuleft-circle"></i>
+                    <span class="menu-text">Người dùng</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<script>
+    function filterMenu() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('searchBox');
+        filter = input.value.toUpperCase();
+        ul = document.querySelector('.overflow-y');
+        li = ul.getElementsByClassName('menu-items');
+        console.log('Filter value:', filter);  
+        for (i = 0; i < li.length; i++) {
+
+            a = li[i].getElementsByTagName("a")[0];
+            span = a.getElementsByTagName("span")[0];
+            if (span) {
+                txtValue = span.textContent || span.innerText;
+                console.log('Item text:', txtValue.toUpperCase().indexOf(filter));  // Kiểm tra văn bản của từng mục
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            } else {
+                console.log('Span not found for item:', li[i]);
+            }
+        }
+    }
+    window.addEventListener('load', function () {
+        jQuery(function () {
+            const $menu = $('#sidebar');
+            const $dropdown = $menu.find('.menu-dropdown');
+            const $li = $dropdown.parent();
+            const $submenu = $dropdown.next();
+
+            $li.removeClass('open active');
+            $submenu.slideUp(0);
+
+            $dropdown.each(function () {
+                let $active = $(this).next().find('.active');
+                if ($active.length > 0) {
+                    $(this).parent().addClass('open');
+                    $(this).next().slideDown(0);
+                }
+            });
+
+            //console.log($drop_down);
+            $dropdown.on('click', function (event) {
+                $(this).parent().siblings('.open').find('.submenu').slideUp(200);
+                $(this).parent().siblings('.open').removeClass("open");
+            });
+
+            function CompactMenu() {
+                var width = $(window).width();
+                if (width <= 1199) {
+                    $menu.addClass("menu-compact");
+                } else {
+                    $menu.removeClass("menu-compact");
+                }
+            }
+            CompactMenu();
+            $(window).on('resize', CompactMenu);
+        });
+
+        $('#sidebar-collapse').click(function () {
+            $(this).toggleClass('active');
+        });
+
+        $('.click_caret-menu').click(function (event) {
+            event.preventDefault();
+            $('.drop_click_caret-menu').toggleClass('open');
+        });
+        $(document).click(function (e) {
+            var target = e.target;
+            if (!$(target).is('.click_caret-menu') && !$(target).is('.click_caret-menu')) {
+                $('.drop_click_caret-menu').removeClass('open');
+            }
+        });
+    })
+</script>

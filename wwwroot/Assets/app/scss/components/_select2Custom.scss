@@ -1,0 +1,102 @@
+.select2-drop#select2-drop {
+    background: #434343;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    color: #f2f2f2;
+    .select2-results .select2-highlighted {
+        background-color: #333333;
+        color: #fff;
+    }
+    .select2-search {
+        padding-top: 6px;
+        &::before {
+            top: 38%;
+        }
+    }
+}
+
+.select-dark-dropdown {
+    .select2-results .select2-no-results,
+    .select2-results .select2-searching,
+    .select2-results .select2-selection-limit {
+        background-color: transparent;
+    }
+    .select2-search {
+        margin-top: 6px;
+    }
+    .select2-results .select2-no-results,
+    .select2-results .select2-searching,
+    .select2-results .select2-selection-limit {
+        background-color: transparent;
+    }
+}
+
+.bootstrap-select.select-cus {
+    .dropdown-toggle {
+        background-color: #E5E7EB !important;
+        border: none;
+        border-radius: 8px !important;
+        color: #4f4f4f !important;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        background: #434343;
+        box-shadow: 0px 2px 10px rgb(0 0 0 / 10%);
+        border-radius: 8px;
+        color: #f2f2f2 !important;
+        li.selected {
+            a {
+                background-color: #333333;
+                color: $white !important;
+
+            }
+        }
+        li {
+            a {
+                color: $white !important;
+                &:hover,
+                :focus {
+                    background-color: #333333;
+                }
+            }
+        }
+        .btn-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 4px;
+            .actions-btn {
+                border-radius: 6px !important;
+            }
+        }
+    }
+}
+
+.select-cus {
+    .select2-choices,
+    .select2-choice {
+        background: #E5E7EB;
+        border: none;
+        border-radius: 8px;
+        color: #2e2e2e;
+        .select2-search-field input {
+            margin: 0;
+        }
+        .select2-arrow {
+            background: transparent;
+            color: #4f4f4f;
+        }
+    }
+    .select2-choice > .select2-chosen {
+        color: $color-gray200;
+        font-weight: 500;
+    }
+}
+.select2-results {
+    @include scrollbars(0.6em, black, transparent);
+}
+.select2-results .select2-no-results, .select2-results .select2-searching, .select2-results .select2-selection-limit {
+    background-color: transparent;   
+}

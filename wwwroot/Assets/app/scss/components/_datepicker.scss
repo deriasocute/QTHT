@@ -1,0 +1,38 @@
+.datepicker-days {
+    .table-condensed {
+        thead {
+            background: $pri-color;
+
+            th {
+                border-radius: 0;
+                color: $white;
+                font-weight: 400;
+            }
+
+            .datepicker-switch:hover {
+                background: $pri-color;
+            }
+
+            tr {
+                &:last-child {
+                    th {
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        letter-spacing: 0.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+    background-color: $medium-blue !important;
+    background-image: none !important;
+    color: $white !important;
+}

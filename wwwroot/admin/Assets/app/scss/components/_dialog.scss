@@ -1,0 +1,21 @@
+.ui-dialog {
+    .ui-dialog-title {
+        background-color: $medium-blue;
+        background-image: none;
+    }
+
+    &.ui-widget-content {
+        padding-bottom: 0;
+
+        .dialog_content_body {
+            &.useScrollBar {
+                max-height: calc(100vh - 115px);
+            }
+        }
+    }
+
+    .ui-dialog-buttonpane {
+        background-color: $white;
+        margin-top: 0;
+    }
+}

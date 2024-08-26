@@ -1,0 +1,116 @@
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    background-size: auto 16px;
+    
+    &.icon-code {
+        background-image: url('../img/exts-svg/code.svg');
+    }
+
+    &.icon-titlepage {
+        background-image: url('../img/exts-svg/titlepage.svg');
+        width: 26px;
+        height: 26px;
+        background-size: auto 24px;
+    }
+
+    &.icon-introduce1 {
+        background-image: url('../img/exts-svg/icon-introduce1.svg');
+    }
+    &.icon-introduce2 {
+        background-image: url('../img/exts-svg/icon-introduce2.svg');
+    }
+    &.icon-introduce3 {
+        background-image: url('../img/exts-svg/icon-introduce3.svg');
+    }
+    &.icon-introduce4 {
+        background-image: url('../img/exts-svg/icon-introduce4.svg');
+    }
+    &.icon-introduce5 {
+        background-image: url('../img/exts-svg/icon-introduce5.svg');
+    }
+
+    &.icon-Time {
+        background-image: url('../img/exts-svg/Time.svg');
+        vertical-align: bottom;
+        width: 22px;
+        height: 22px;
+        background-size: auto 20px;
+    }
+    &.icon-filter {
+        background-image: url('../img/exts-svg/filter.svg');
+    }
+
+    &.icon-viewDetail {
+        background-image: url('../img/exts-svg/viewDetail.svg');
+        background-size: auto 13px;
+    }
+
+    &.icon-edit {
+        background-image: url('../img/exts-svg/edit.svg');
+        background-size: auto 14px;
+    }
+    &.icon-delete {
+        background-image: url('../img/exts-svg/delete.svg');
+        background-size: auto 14px;
+    }
+    &.icon-uploadfile {
+        background-image: url('../img/exts-svg/uploadfile.svg');
+        background-size: auto 14px;
+    }
+    &.icon-popup {
+        background-image: url('../img/exts-svg/popup.svg');
+        background-size: auto 16px;
+        height: 23px;
+        width: 23px;
+        vertical-align: sub;
+    }
+    &.icon-search {
+        background-image: url('../img/cust/svg/search.svg');
+        background-size: auto 22px;
+        
+    }
+    &.icon-chat {
+        background-image: url('../img/cust/svg/icon-chat.svg');
+        background-size: auto 25px;
+        width: 31px;
+        height: 28px;
+    }
+    
+    &.icon-upload {
+        background-image: url('../img/cust/svg/icon-upload.svg');
+        background-size:  auto 25px;
+        width: 31px;
+        height: 28px;
+    }
+    &.icon-close {
+        background-image: url('../img/cust/svg/icon-close.svg');
+        background-size:  auto 14px;
+        width: 25px;
+        height: 25px;
+    }
+    &.previous-page {
+        background-image: url('../img/cust/svg/previous-page.svg');
+        background-size:  auto 14px;
+        width: 18px;
+        height: 25px;
+    }
+
+    &.icon-send-plane {
+        background-image: url('../img/cust/svg/send-plane-fill.svg');
+        background-size:  auto 24px;  
+    }
+    &.icon-View {
+        background-image: url('../img/cust/svg/View.svg');
+        background-size: auto 14px;
+        width: 17px;
+        height: 14px;
+        vertical-align: middle;
+    }
+    
+}
+

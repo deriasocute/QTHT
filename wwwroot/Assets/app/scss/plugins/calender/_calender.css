@@ -1,0 +1,89 @@
+
+/* .container {
+  width: 100%;
+  height: 100vh;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.calender_container {
+  /* width: 250px;
+  height: auto; */
+}
+.month {
+  width: 200px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.month i {
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: white;
+}
+
+.weekdays div {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+}
+
+.days {
+  width: 208px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 12px;
+}
+
+.days div {
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  margin-right:9px;
+  display: flex;
+  justify-content: center;
+}
+
+.days div:hover:not(.today) {
+  background-color: #000;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  color: #00567F;
+  background-color: white;
+  border-radius: 7px;
+}

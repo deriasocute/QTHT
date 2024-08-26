@@ -1,0 +1,29 @@
+//css abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+
+//css reset
+@import 'base/reset';
+
+//css components
+@import 'components/buttons';
+@import 'components/dialog';
+@import 'components/input';
+@import 'components/breadcrumb';
+@import 'components/colors';
+@import 'components/tabs';
+@import 'components/dropdown';
+@import 'components/table';
+@import 'components/badges';
+@import 'components/chart';
+
+//css layout
+// @import 'layout/header';
+@import 'layout/left';
+@import 'layout/body';
+
+//css page
+@import 'page/index';
+
+@import 'layout/reponsive';

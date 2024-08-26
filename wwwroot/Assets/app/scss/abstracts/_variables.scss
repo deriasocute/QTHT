@@ -1,0 +1,260 @@
+// Color system
+$primary-1: #00689d !default;
+$primary-2: #d93e34 !default;
+$body-color: #000 !default;
+$pri-color: #0094dc !default;
+$second-color: #d93e34 !default;
+$sub-color: #0094dc !default;
+$white: #fff !default;
+$black: #000 !default;
+$text-body: #111827 !default;
+$bg-body: #f5f6fa !default;
+$text-input: #333333 !default;
+$text-placeholder: #939ba2 !default;
+$text-disabled: #6c757d !default;
+$input-disabled: #e9ecef !default;
+$white: #fff !default;
+$black: #000;
+$gray-1: #f5f5f5 !default;
+$gray-2: #f0f0f0 !default;
+$gray-3: #cccccc !default;
+$yellow: #ffc750;
+$green: #3dc947;
+$gray-4: #d4d4d4 !default;
+$gray-5: #adb5bd !default;
+$blue: #3aa3ff !default;
+$orange: #e68410;
+$blue-2: #59d2ea !default;
+$green: #3dc947;
+$dark-red: #c94840;
+$orange: #e68410;
+$yellow: #ffc750;
+$orange: #b66326;
+
+// Color palette
+$pri-blue: #2f80edcc !default;
+$pri-green: #27ae60cc !default;
+$pri-red: #eb5757cc !default;
+$pri-orange: #f2994acc !default;
+
+$light-blue: #2f80edcc;
+$light-gray: #D1D5DB;
+$medium-blue: #0094dc !default;
+$heavy-blue: #1a6ab3 !default;
+$dark-blue: #00567f !default;
+$pri-purple: #7300ce !default;
+$pri-yellow: #f8b425 !default;
+$dark-orange: #d95c34 !default;
+$dark-coban: #738a9f !default;
+$pre-gray: #333333 !default;
+$dark-green: #2aaf47 !default;
+$primary-1: #00689d !default;
+$pre-gray-1: #dddddd !default;
+
+//Mono color
+$pri-blue-1: #004160 !default;
+$pri-blue-2: #00567f !default;
+$pri-blue-3: #006a9d !default;
+$pri-blue-4: #0094dc !default;
+$pri-blue-5: #08acfb !default;
+//font
+$font-family-base:'Inter', "Roboto", sans-serif !default;
+$font-family-icons: "l-ione" !default;
+$font-size-base: 14px !default;
+$font-size-small: 10px !default;
+$line-height-base: $font-size-base * 1.5 !default;
+$font-weight-base: 400 !default;
+
+
+//text-color 
+$color-gray200:#4F4F4F;
+$color-gray500:#6B7280;
+$color-gray600:#4B5563;
+$color-gray700:#374151;
+
+//size icon font
+$font-size-icon-1: 16px !default;
+$font-size-icon-2: 24px !default;
+
+//link
+$link-color: $pri-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+//height header page
+$heigh-header-page: 45px !default;
+$width-left-page: 250px !default;
+
+//box shadow popup
+$box-shadow-popup: 0px 4px 8px rgba(0, 0, 0, 0.16) !default;
+
+//border-color
+$border-color: #e5e5e5 !default;
+$border-color-table: #f0f0f0 !default;
+
+//layout
+$page_block: #fff;
+
+
+// Class Background color
+// .light-blue {
+//     background-color: $light-blue;
+// }
+
+
+
+.medium-blue {
+    background-color: $medium-blue;
+}
+
+.heavy-blue {
+    background-color: $heavy-blue;
+}
+
+.dark-blue {
+    background-color: $dark-blue;
+}
+
+.pri-green {
+    background-color: $pri-green;
+}
+
+.pri-red {
+    background-color: $pri-red;
+}
+
+.pri-yellow {
+    background-color: $pri-yellow;
+}
+
+.pri-orange {
+    background-color: $pri-orange;
+}
+
+.pri-purple {
+    background-color: $pri-purple;
+}
+
+.dark-orange {
+    background-color: $dark-orange;
+}
+
+.dark-coban {
+    background-color: $dark-coban;
+}
+
+.pre-gray {
+    background-color: $pre-gray;
+}
+
+.dark-green {
+    background-color: $dark-green;
+}
+
+.blue-2 {
+    background-color: #2980b9;
+}
+
+.dark-pink {
+    background-color: #b04284;
+}
+
+.light-pink {
+    background-color: #e75b8d;
+}
+
+.green-3 {
+    background-color: #3fa3ba;
+}
+
+.gray-3 {
+    background-color: #34495e;
+}
+.green-4 {
+    background-color: #2980b9;
+}
+
+.orange-2 {
+    background-color: #d2ac13;
+}
+
+.red-2 {
+    background-color: #d5405c;
+}
+
+.green-5 {
+    background-color: #8ba23a;
+}
+
+// Class color
+// .color-light-blue {
+//     color: $light-blue;
+// }
+
+.color-medium-blue {
+    color: $medium-blue;
+}
+
+.color-heavy-blue {
+    color: $heavy-blue;
+}
+
+.color-dark-blue {
+    color: $dark-blue;
+}
+.light-gray {
+    color: $light-gray;
+}
+
+.color-pri-green {
+    color: $pri-green;
+}
+
+.color-pri-red {
+    color: $pri-red;
+}
+
+.color-pri-yellow {
+    color: $pri-yellow;
+}
+
+.color-pri-orange {
+    color: $pri-orange;
+}
+
+.color-pri-purple {
+    color: $pri-purple;
+}
+
+.color-dark-orange {
+    color: $dark-orange;
+}
+
+.color-dark-coban {
+    color: $dark-coban;
+}
+
+.color-pre-gray {
+    color: $pre-gray;
+}
+
+.color-dark-green {
+    color: $dark-green;
+}
+.color-dark-body {
+    color: $text-body;
+}
+
+.text-wrap {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; /* text-overflow: clip; */
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.text-right {
+    text-align: right;
+}

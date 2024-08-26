@@ -1,0 +1,30 @@
+
+.widget-buttons {
+    display: none;
+}
+
+.bs-searchbox {
+    .form-control {
+        padding-left: 12px;
+    }
+}
+
+.layout-category {
+    .page-content {
+        > .container {
+            &, &-fluid {
+                margin-top: 15px
+            }
+        }
+
+        .page-body {
+            padding: 0 5px !important;
+        }
+    }
+}
+
+.overlay-open {
+    height: 100vh !important;
+    overflow: hidden;
+    cursor: auto;
+}

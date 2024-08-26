@@ -1,0 +1,48 @@
+﻿@model QTHT.Models.View.DeviceModel
+@using QTHT.Customs
+@{
+    var SersorConfig = Model.Sensor.ID > 0 ? Model.Sensor : new Sensor();
+}
+<form asp-controller="Sensor" asp-action="@(string.IsNullOrEmpty(Model.Sensor.SensorType) ? "Create" : "Edit")" method="post">
+    <tr class="item" role="row">
+    <td class="center">
+        <span class="autoIndex">@Model.Index</span>
+    </td>
+    <td class="">
+        <div class="form-group">
+            <label asp-for="Sensor.SensorType" class="control-label col-md-3"></label>
+            <div class="col-md-9">
+                <input asp-for="Sensor.SensorType" class="form-control w-100" placeholder="Loại cảm biến" value="@Model.Sensor.SensorType"/>
+                <span asp-validation-for="Sensor.SensorType" class="text-danger"></span>
+            </div>
+        </div>
+    </td>
+    <td class="">
+        <div class="form-group">
+            <label asp-for="Sensor.Created" class="control-label col-md-3"></label>
+            <div class="col-md-9">
+                <input asp-for="Sensor.Created" class="form-control w-100" type="datetime" placeholder="Ngày tạo" value="@Model.Sensor.Created"/>
+                <span asp-validation-for="Sensor.Created" class="text-danger"></span>
+            </div>
+        </div>
+    </td>
+    <td class="">
+        <div class="form-group">
+            <label asp-for="Sensor.Updated" class="control-label col-md-3"></label>
+            <div class="col-md-9">
+                <input asp-for="Sensor.Updated" class="form-control w-100" type="datetime" placeholder="Sửa lần cuối" value="@Model.Sensor.Updated"/>
+                <span asp-validation-for="Sensor.Updated" class="text-danger"></span>
+            </div>
+        </div>
+    </td>
+    <td class="colfit">
+        <input type="hidden" name="param_ID" value="@SersorConfig.ID" />
+        <div class="cell-btnaction">
+            <a class="btn btn-danger btn-xs removeItem" data-id="@SersorConfig.ID" data-target=".ui-dialog:visible" title="Xóa" href="javascript:void(0);">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </div>
+    </td>
+</tr>
+</form>
+

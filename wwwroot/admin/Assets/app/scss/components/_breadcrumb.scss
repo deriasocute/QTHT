@@ -1,0 +1,48 @@
+.breadcrumb_page {
+    border-bottom: 1px solid $gray-2;
+    background: #fff;
+    @include clear;
+    li {
+        display: block;
+        padding: 4px 15px;
+        position: relative;
+        float: left;
+        color: $primary-1;
+        &:before{
+            display: none;
+        }
+        a {
+            color: $primary-1;
+            font-size: $font-size-base - 1;
+            font-weight: 400;
+            display: block;
+            &:hover {
+                text-decoration: none;
+            }   
+            i {
+                font-size: 14px;
+            }                     
+        }
+
+        &:after {
+            font-family: "FontAwesome";
+            content: '\f105';
+            font-size: 14px;
+            color: #B4B4B4;
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        &:last-child {
+            a {
+                color: rgba($color: $black, $alpha: 0.7);
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

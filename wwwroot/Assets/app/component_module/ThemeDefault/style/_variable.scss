@@ -1,0 +1,46 @@
+$font-size-base: 13px !default;
+
+//default
+$Header-notifi: #248bcc;
+$Header-notifi-active: #1e74aa;
+
+//Header color
+$bg-header: #ffffff;
+$Header-heavy-blue: #1a6ab3 !default;
+$Header-pri-color: #94a3b8 !default;
+$white: #fff !default;
+$font-size-base: 13px !default;
+$Header-text-body: #6c757d !default;
+$Header-light-blue: #08acfb !default;
+$Header-text-disabled: #6c757d !default;
+$Header-text-input: #333333 !default;
+$height-header: 46px;
+//notifi
+$Header-dropdown-menu: #94a3b8 !default;
+$Header-bg-badge: #ef4444;
+
+//layout color
+$Layout-bg-body: linear-gradient(
+  to top,
+  #122c66,
+  #0e3b76,
+  #094a85,
+  #045993,
+  #0369a1
+);
+
+//menu-left color
+$Menu-bg-body: linear-gradient(
+    180deg,
+    rgba(147, 213, 255, 0.2) 0%,
+    rgba(182, 216, 238, 0.2) 69.37%,
+    rgba(255, 176, 118, 0.2) 98.22%
+  ),
+  #ffffff !default;
+$Menu-height-header-page: 46px !default;
+$Menu-text-active: #1d76c7 !default;
+$Menu-text-input: #333333 !default;
+$Menu-text-placeholder: #939ba2 !default;
+$Menu-text-placeholder: #939ba2 !default;
+$Menu-text-body: #4b5563 !default;
+$Menu-bg-button: #d93e34 !default;

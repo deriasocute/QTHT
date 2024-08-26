@@ -1,0 +1,47 @@
+.page-sidebar {
+    .sidebar-menu {
+        // margin-top: 10px;
+        > li {
+            > .submenu {
+                .menu-expand {
+                    display: inline-block !important;
+                    color: $heavy-blue;
+                }
+
+                > li {
+                    a {
+                        border-top: none;
+                    }
+
+                    > .submenu {
+                        background-color: $white;
+                        box-shadow: none;
+                        border-top: 1px solid $border-color;
+
+                        > li {
+                            > a {
+                                &:hover {
+                                    color: $heavy-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-icon {
+            color: inherit !important;
+        }
+    }
+}
+
+/*.page-sidebar {
+    #body-admin-categorytype-index & {
+        display: none !important;
+    }
+}*/
+
+#body-admin-category-index .submenu {
+    height: calc(100vh - #{$heigh-header-page} - 38px)
+}

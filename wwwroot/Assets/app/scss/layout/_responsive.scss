@@ -1,0 +1,362 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 990px) {
+    i.icon-arrow-left2.t-left.slick-arrow {
+        left: 0 !important;
+    }
+    i.icon-arrow-right2.t-right.slick-arrow {
+        right: 0 !important;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1199px) {
+    .sub-news {
+        display: none;
+    }
+    .business_title {
+        font-size: 21px !important;
+        line-height: 29px !important;
+        font-weight: 600 !important;
+    }
+    ul.news_block {
+        display: block !important;
+        li {
+            a {
+                img {
+                    margin-right: 10px;
+                    float: left;
+                    width: 60px !important;
+                    height: 60px !important;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    -webkit-transition: all 2s ease;
+                    -moz-transition: all 2s ease;
+                    -ms-transition: all 2s ease;
+                    transition: all 2s ease;
+    
+                    &:hover {
+                     
+                    }
+                }
+                .news_content {
+                
+                }
+                .news_date {
+                   
+                }
+            }
+        }
+    }
+    .statistical_footer {
+        .footer_registration {
+    
+            .footer_registration__title {
+                padding-left: 15px !important;
+    
+                img.footer_registration__title--icon {
+                    width: 40px !important;
+                    height: 40px !important;
+                    
+                }
+                .footer_registration__total {
+    
+                    .currency {
+                        font-size: 20px !important;
+                    }
+                    .negmoney {
+                    }
+                    .footer_registration__next {
+                    }
+                }
+            }
+            .footer_registration__item {
+    
+                &:last-child {
+                }
+    
+                span {
+                }
+                label {
+                }
+            }
+        }
+        .footer_task {
+    
+            .footer_task__title {
+                padding-left: 15px !important;
+    
+                img.footer_task__title--icon {
+                    width: 40px !important;
+                    height: 40px !important;
+                }
+                .footer_task__total {
+    
+                    .currency {
+                        font-size: 20px !important;
+                    }
+                    .negmoney {
+                    }
+                    .footer_task__next {
+                    }
+                }
+            }
+            .footer_task__item {
+    
+                span {
+                }
+                label {
+                }
+            }
+        }
+    }
+    .footer_registration__item {
+        padding-left: 15px !important;
+
+        .footer_statistical {
+            flex: 1;
+            display: block;
+            text-align: center;
+        }
+    }
+    .footer_task__item {
+        padding: 21px 15px 11px 15px !important;
+
+        .footer_statistical {
+            flex: 1;
+            display: block;
+            text-align: center;
+            &:nth-child(2){
+                flex: 1.5;
+            }
+
+        }
+    }
+    .fsi_group_chart.realPer {
+        height: 240px !important;
+    }
+    .days div {
+        font-size: 11px !important;
+    }
+    .morris-bar-chart.fsi_group_chart {
+        height: 242px !important;
+    }
+    
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    span.news_content {
+        font-size: 11px;
+    }
+    
+    .business_management {
+        margin-top: 75px;
+    }
+    h1.business_title {
+        font-size: 20px;
+        line-height: 33px;
+        font-weight: 500;
+    }
+    .total_business__container--item {
+        color: #fff;
+        border: 1px solid;
+        border-color: rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        label {
+            font-weight: 400;
+        }
+        span {
+            width: 100%;
+            overflow: hidden;
+            font-size: 17px;
+        }
+    }
+    .list_module__content {
+        .list_module__content--inner {
+            a {
+                width: 65px !important;
+                height: 65px !important;
+            }
+        }
+    }
+
+    .list_module {
+        padding-top: 25px;
+    }
+    .news_block {
+        width: 100%;
+        ul {
+            li {
+                width: 50%;
+            }
+        }
+        .news_primarily {
+            display: none;
+        }
+        .statistical_footer {
+            width: 60%;
+        }
+        .list_module {
+            width: calc(100% - 20px);
+        }
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    /*btn đăng nhập form login*/
+    .div_btn {
+        .btn_login.btn_fill {
+            &:hover {
+                color: $white !important;
+                text-decoration: none !important;
+            }
+        }
+    }
+  
+}
+
+@media (max-width: 1600px) {
+    .col-xxxl-12 {
+        flex-basis:100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .col-xxxl-3 {
+        flex-basis:25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .col-xxxl-4 {
+        flex-basis:33.33333333%;
+        max-width: 33.33333333%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .col{
+        &-xl-5 {
+            flex-basis: 41.66666667%;
+            max-width: 41.66666667%;
+        }
+    }
+}
+
+@media (min-width: 1367px) {
+    .col-xl-12 {
+        width: 100%;
+    }
+    .col-xl-4 {
+        width: 33.33333333%;
+    }
+    .col-xl-8 {
+        width: 66.66666667%;
+    }
+    .col-xl-10 {
+        width: 83.33333333%;
+    }
+    
+}
+
+
+@media ( max-width: 1800px  ){
+    .body-dashboard {
+        .home-body {
+            width: 100% !important;
+        }
+    }
+    body .select2-container {
+        min-width: auto !important;
+    }
+}
+
+
+@media (min-width: 1366px  ) {
+    
+}
+
+//Màn hình chiều ngang cho latop full HD
+@media (max-width: 1300px  ) {
+    .box-datetime {
+        position: unset !important;
+        margin-bottom: 8px;
+        margin-top: -10px;
+        min-height: 38px;
+        line-height: 38px;
+    }
+    .page_block {
+        &.page_block-height {
+            min-height: 396px;
+        }
+    }
+}
+
+//Màn hình chiều ngang cho tablet (VD: iPad), hoặc chiều dọc cho tablet lớn (VD iPad Pro)
+@media (max-width: 1023px  ) {
+    .box-datetime {
+        position: relative ;
+        top: 0;
+        justify-content: end;
+        margin-bottom: 8px;
+    }
+}
+
+//Màn hình chiều dọc cho tablet (VD: iPad)
+@media (max-width: 767px  ) {
+    .page_block .page_block-title .useSlickSlider-title{
+        margin: 0 20px;
+    }
+   
+}
+
+//Màn hình chiều ngang cho smartphone vừa
+@media (max-width: 639px  ) {
+    .box-select-dateTime {
+        flex-wrap: wrap;
+    }
+    .navbar .navbar-container .navbar-container-left .navbar-header {
+        min-width: auto !important;
+    }
+    .BasicColumn-legend-sub{
+        flex-wrap: wrap;
+    }
+    .useSlickSlider-title {
+        max-width: 90%;
+    }
+}
+
+
+//Màn hình chiều ngang cho smartphone nhỏ
+@media (max-width: 479px ) {
+    .ilogo {
+        background-size: 80% auto;
+        width: 80px;
+    }
+    .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {
+        padding-left: 0 !important;
+        padding-right: 0;
+    }
+    .useSlickSlider-title {
+        max-width: 87%;
+    }
+    body .select2-container {
+        min-width: fit-content;
+    }
+    .todoList .todo-list-item {
+        text-align: center;
+    }
+}
+
+@media (max-width: 321px ) { 
+    .useSlickSlider-title {
+        max-width: 180px;
+    }
+}

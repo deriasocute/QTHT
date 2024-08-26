@@ -1,0 +1,24 @@
+﻿@model User
+<div class="modal fade over-flow-hidden" id="deleteUser-@Model.ID">
+    <div class="modal-dialog w-450px">
+        <div class="modal-content">
+            <div class="modal-header title-form">
+                <h4 class="modal-title white" id="addUserLabel">
+                    Xác nhận xoá người dùng
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="User" asp-action="Delete" method="post">
+                    <div class="form-group d-flex justify-content-center">
+                        <input type="hidden" asp-for="ID"/>
+                        <P class="mt-20 mb-10">Xoá người dùng: @Model.Name</P>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Huỷ</button>
+                <button type="submit" class="btn btn-danger" data-save="modal">Xoá</button>
+            </div>
+        </div>
+    </div>
+</div>

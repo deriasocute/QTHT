@@ -1,0 +1,68 @@
+﻿@model Device
+<div class="modal fade over-flow-hidden" id="@(string.IsNullOrEmpty(Model.Name) ? "addDevice" : "editDevice-" + @Model.ID)">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header title-form">
+                @if (string.IsNullOrEmpty(Model.Name))
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Thêm mới máy bơm
+                    </h4>
+                }
+                else
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Chỉnh sửa máy bơm
+                    </h4>
+                }
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Device" asp-action="@(string.IsNullOrEmpty(Model.Name) ? "Create" : "Edit")" method="post">
+                    <div class="frame-one container-fluid p-4">
+                        <div class="d-flex flex-column w-100">
+                            <div class="form-group row mb-10">
+                                <label asp-for="Name" class="control-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Name" class="form-control w-100" placeholder="Mã máy bơm" value="@Model.Name"/>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="ESP8266ID" class="control-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="ESP8266ID" class="form-control w-100" placeholder="Mã điều khiển" value="@Model.ESP8266ID"/>
+                                    <span asp-validation-for="ESP8266ID" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10 hidden">
+                                <label asp-for="Status" class="control-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Status" class="form-control" type="checkbox" value="@Model.Status"/>
+                                    <span asp-validation-for="Status" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10 hidden">
+                                <label asp-for="Created" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Created" class="form-control__edit form-control date" type="datetime" placeholder="Ngày tạo" value="@Model.Created"/>
+                                    <span asp-validation-for="Created" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10 hidden">
+                                <label asp-for="Updated" class="control-label col-md-2"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Updated" class="form-control__edit form-control date" type="datetime" placeholder="Sửa lần cuối" value="@Model.Updated"/>
+                                    <span asp-validation-for="Updated" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" data-save="modal">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>

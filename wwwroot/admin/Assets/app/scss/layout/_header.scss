@@ -1,0 +1,231 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+
+    .account-area {
+        right: 0 !important;
+    }
+}
+
+.navbar .navbar-inner {
+    background: $heavy-blue !important;
+}
+
+.navbar .sidebar-collapse:hover {
+    box-shadow: none;
+}
+
+.navbar .sidebar-collapse.active .collapse-icon {
+    box-shadow: none;
+}
+
+.navbar .navbar-inner > .navbar-container > div.sidebar-collapse {
+    left: 0;
+}
+
+.navbar-header.pull-left {
+    margin-left: 50px;
+}
+
+.navbar .navbar-brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+}
+.navbar .navbar-brand > img {
+    display: inline-block;
+    height: 40px;
+    width: 179px;
+    background-size: auto 40px;
+    object-fit: contain;
+    object-position: left center;
+}
+.navbar-container {
+    @include clear;
+}
+
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a:hover {
+    box-shadow: none;
+    background: $heavy-blue !important;
+}
+
+//.ntfit.unread {
+//    background: $white !important;
+//}
+
+.user_activity .nav-tabs {
+    background: $pri-color !important;
+}
+
+.user_activity .nav-tabs > li.active > a, .user_activity .nav-tabs > li.active > a:focus, .user_activity .nav-tabs > li.active > a:hover, .user_activity .nav-tabs > li > a:focus {
+    background: $pri-color !important;
+}
+
+.user_activity .nav-tabs > li > a {
+    background: $pri-color !important;
+    color: $white !important;
+}
+
+.navbar {
+    .account-area {
+        .advanced_search_bar .form-control.input-sm {
+            padding-left: 10px;
+            background-color: transparent !important;
+            background: none !important;
+            color: $white;
+
+            &:focus, &:active {
+                color: $white !important;
+                background-color: transparent !important;
+                background: none !important;
+            }
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+}
+
+.nav-cat {
+    width: 40px;
+    height: 100%;
+    position: absolute !important;
+    left:5px;
+    top: 0;
+
+    & > a.dropdown-toggle {
+        display: flex;
+        width: 40px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px !important;
+        color: $white !important;
+    }
+
+    .dropdown-menu {
+        background: $white;
+        padding: 8px 0;
+        border-radius: 6px !important;
+        overflow: hidden;
+    }
+
+    .nav_dropdown {
+        padding: 0;
+        width: max-content;
+        max-height: 460px;
+        margin: 0;
+
+        li {
+            display: block;
+            padding: 0 15px;
+            position: relative;
+
+            &:hover {
+                background-color: #F0F0F0;
+            }
+
+            a {
+                display: block;
+                position: relative;
+                padding: 6px 0 !important;
+                font-size: $font-size-base;
+                font-weight: 400;
+                color: $text-body !important;
+                display: flex;
+                align-items: center;                
+                img {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+                }
+                &:hover, &:focus, &:active {
+                    background-color: transparent !important;
+                }
+
+            }
+        }
+    }
+}
+
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area > li .dropdown-menu.dropdown-login-area > li .avatar-area .caption {
+    color: $white !important;
+    background-color: $light-blue !important;
+}
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a > .click_caret {
+    margin-left: 3px;
+}
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area > li > a .badge {
+    background-color: #D93E34 !important;
+    background-image: none !important;
+    right: inherit !important;
+    left: calc(50% - 2px) !important;
+    z-index: 1;
+}
+
+.navbar {
+    .advanced_search_bar {
+        border-radius: 3px;
+        background: none;
+        background-color: rgba($black, 0.1);
+    }
+
+    .advanced_search_bar .btn-searchs > .btn {
+        margin: 0 !important;
+        padding: 0 15px !important;
+        display: flex;
+        height: 32px !important;
+        align-items: center;
+        background: none;
+        color: $white !important;
+        opacity: 1;
+
+        &:hover, &:focus, &:active {
+            background: none !important;
+            background-color: transparent !important;
+        }
+    }
+}
+
+.navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {
+    padding-left: 12px;
+}
+
+body .navbar .account-area {
+    .dropdown-menu.dropdown-login-area {
+        li {
+            min-height: auto !important;
+
+            &.email {
+                a {
+                    padding: 0 !important;
+                    color: $text-disabled !important;
+                }
+            }
+
+            & > a {
+                padding: 8px 0 !important;
+                color: $text-input !important;
+
+                &:hover, &:focus {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+.drop_click_caret .user_ava .avatar-area {
+    margin-top: 5px;
+
+    & > img {
+        display: inline-block;
+    }
+}

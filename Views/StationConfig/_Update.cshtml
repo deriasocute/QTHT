@@ -1,0 +1,54 @@
+﻿@model StationConfig
+<div class="modal fade over-flow-hidden" id="@(string.IsNullOrEmpty(Model.Name) ? "addStationConfig" : "editStationConfig-" + @Model.ID)">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header title-form">
+                @if (string.IsNullOrEmpty(Model.Name))
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Thêm mới trạm bơm
+                    </h4>
+                }
+                else
+                {
+                    <h4 class="modal-title white" id="addUserLabel">
+                        Chỉnh sửa trạm bơm
+                    </h4>
+                }
+            </div>
+            <div class="modal-body">
+                <form asp-controller="StationConfig" asp-action="@(string.IsNullOrEmpty(Model.Name) ? "Create" : "Edit")" method="post">
+                    <div class="frame-one container-fluid p-4">
+                        <div class="d-flex flex-column w-100">
+                            <div class="form-group row mb-10">
+                                <label asp-for="Name" class="control-label col-md-3">Tên trạm bơm</label>
+                                <div class="col-md-9">
+                                    <input asp-for="Name" class="form-control w-100" placeholder="Tên trạm bơm" value="@Model.Name"/>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="Address" class="control-label col-md-3">Vị trí</label>
+                                <div class="col-md-9">
+                                    <input asp-for="Address" class="form-control w-100" placeholder="Vị trí" value="@Model.Address"/>
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-10">
+                                <label asp-for="DeviceID" class="control-label col-md-3">Tên máy bơm</label>
+                                <div class="col-md-9">
+                                    <select asp-for="DeviceID" class="form-control w-100" asp-items="ViewBag.CodePump" value="@Model.DeviceID"></select>
+                                    <span asp-validation-for="DeviceID" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary" data-save="modal">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>

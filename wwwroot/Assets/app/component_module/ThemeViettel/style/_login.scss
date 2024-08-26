@@ -1,0 +1,57 @@
+.login_mainContent {
+  .itm_pic:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(25 99 111 / 45%);
+    mix-blend-mode: screen;
+  }
+  .login-left {
+    // width: 65%;
+  }
+  .login-right {
+    // width: 35%;
+    .login-form .btn_login,
+    .form-login .btn_login {
+      border-radius: 24px !important;
+      background-color: $Menu-bg-button ;
+      transition: all 0.5S;
+      &:hover {
+        transition: all 0.3S;
+        opacity: 0.8;
+      }
+    }
+  } 
+
+  .login-left .login_slide {
+    position: absolute;
+    top: 4%;
+    left: 40px;
+    transform: translate(0);
+  }
+  .box_cap {
+    flex-direction: row !important;
+    .logo_left img {
+      width: 140px !important;
+      max-height: 100px !important;
+      object-fit: contain;
+    }
+    .sologan-right {
+      border-left: 1px solid #ccc;
+      padding-left: 15px;
+      text-align: start;
+      .sologan-right-name {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: calc(28px * 1.5);
+        text-transform: capitalize;
+      }
+      .sologan-right-desc {
+      }
+    }
+  }
+}

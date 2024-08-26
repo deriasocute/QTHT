@@ -1,0 +1,57 @@
+//css abstracts
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+@import "abstracts/_size.scss";
+
+//css base
+@import "base/_reset.scss";
+@import "base/_type.scss";
+
+//css components
+@import "components/_alert.scss";
+@import "components/_badges.scss";
+@import "components/_buttons.scss";
+@import "components/_dialog.scss";
+
+//@import 'components/_nav-dropdown.scss';
+@import "components/_actions-dropdown.scss";
+@import "components/_input-fields.scss";
+@import "components/_pop-over.scss";
+@import "components/_progress.scss";
+@import "components/_tooltips.scss";
+@import "components/_breadcrumb.scss";
+@import "components/_colors.scss";
+@import "components/_tabs.scss";
+@import "components/_datepicker.scss";
+@import "components/_icon.scss";
+@import "components/_custPopup.scss";
+@import "components/_select2Custom.scss";
+@import "components/_dhtmlxgantt.scss";
+@import "components/_loadingTable.scss";
+
+
+//css layout
+@import "layout/_other-page.scss";
+@import "layout/_table.scss";
+@import "layout/_layout.scss";
+@import "layout/_left-category.scss";
+@import "layout/_guideline.scss";
+@import "layout/_home.scss";
+@import "layout/_dashboard.scss";
+@import "layout/_header.scss";
+// @import "layout/_lisence.scss";
+
+//css page
+@import "page/_handle.scss";
+@import "page/_procedure.scss";
+@import "page/_registration.scss";
+@import "page/_statistical.scss";
+@import "page/_storage.scss";
+
+// css plugin
+@import "plugins/selectbox/_selectbox.scss";
+
+@import "_style.scss";
+@import "layout/_responsive.scss";
+@import "components/_share.scss";
+

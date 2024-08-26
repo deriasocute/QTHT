@@ -1,0 +1,41 @@
+$font-size-base: 13px !default;
+
+//default
+$Header-notifi: #ee0033;
+$Header-notifi-active: #f34d70;
+
+//Header color  
+$bg-header: #ee0033;
+$white: #fff !default;
+$font-size-base: 14px !default;
+$Header-dropdown-menu: #94a3b8 !default;
+$Header-text-body: #fff !default;
+$Header-notifi: #f34d70 !default;
+$Header-light-blue: #08acfb !default;
+$Header-bg-badge: #374151;
+$black: #000;
+$Header-text-disabled: #6c757d !default;
+$Header-text-input: #333333 !default;
+$height-header: 46px;
+    //notifi
+
+
+//layout color 
+$Layout-bg-body: url('image/bg_viettel_idc.jpg');
+
+
+//menu-left color
+$Menu-bg-body: linear-gradient(
+        180deg,
+        rgba(147, 213, 255, 0.2) 0%,
+        rgba(182, 216, 238, 0.2) 69.37%,
+        rgba(255, 176, 118, 0.2) 98.22%
+    ),
+    #ffffff !default;
+$Menu-height-header-page: 46px !default;
+$Menu-text-active: #f34d70 !default;
+$Menu-text-input: #333333 !default;
+$Menu-text-placeholder: #939ba2 !default;
+$Menu-text-placeholder: #939ba2 !default;
+$Menu-text-body: #4B5563 !default;
+$Menu-bg-button: #d93e34 !default;

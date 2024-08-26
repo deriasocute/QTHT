@@ -1,0 +1,54 @@
+﻿@model QTHT.Models.View.SensorModel
+@{
+    var listSensor = Model.Sensors;
+}
+<div class="table-responsive over_auto">
+    <table id="StationConfig" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
+        <thead>
+            <tr role="row">
+                <th class="wpx60 center" tabindex="0">STT</th>
+                <th class="wpx60 center" tabindex="0">
+                    <label>
+                        <input class="group-checkable" type="checkbox" />
+                        <span class="text"></span>
+                    </label>
+                </th>
+                <th class="wpx250 " tabindex="0">ID</th>
+                <th class="wpx250" tabindex="0" aria-controls="searchable">Loại cảm biến</th>
+                <th class="wauto" tabindex="0" aria-controls="searchable">Ngày tạo</th>
+                <th class="wauto" tabindex="0" aria-controls="searchable">Sửa lần cuối</th>
+                <th class="wpx150 txtct" tabindex="0" aria-controls="searchable">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var stt = 0;
+                foreach (var item in listSensor)
+                {
+                    stt++;
+                    <tr role="row">
+                        <td class="sorting_1 center">@stt</td>
+                        <td class="sorting_1 center">
+                            <label>
+                                <input data-id="@item.ID" class="checkboxes" type="checkbox" />
+                                <span class="text"></span>
+                            </label>
+                        </td>
+                        <td>@item.ID</td>
+                        <td>@item.SensorType</td>
+                        <td>@item.Created</td>
+                        <td>@item.Updated</td>
+                        <td>
+                            <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editSensor-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xs quickDelete" data-toggle="ajax-modal" data-target="@("deleteSensor-"+item.ID)" data-url="@Url.Action("Delete")/@item.ID">
+                            <i class="fa fa-trash-o"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

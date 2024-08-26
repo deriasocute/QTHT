@@ -1,0 +1,255 @@
+.ui-dialog {
+    font-family: $font-family-base !important;
+
+    .ui-dialog-titlebar {
+        height: 40px !important;
+        background-color: $medium-blue !important;
+        background: $medium-blue !important;
+        display: flex;
+        align-items: center;
+
+        .ui-dialog-title {
+            background-image: none;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+            text-align: left;
+            background-color: transparent;
+        }
+
+        .ui-dialog-titlebar-close {
+            width: 24px;
+            height: 24px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0 !important;
+            right: 7px !important;
+
+            &:hover,
+            &:focus {
+                background-color: rgba($black, 0.1);
+                border: 0 !important;
+            }
+        }
+    }
+
+    .page-body {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+.row.DTTTFooter {
+    @include clear;
+    background: white !important;
+    float: right;
+    width: 100%;
+    padding-top: 10px !important;
+}
+
+.dataTables_filter label:before {
+    display: none;
+}
+
+.wizard {
+    box-shadow: none;
+    background-color: $bg-body;
+    border-radius: 0;
+
+    ul {
+        li {
+            line-height: normal;
+            height: 40px;
+            background: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            .step {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                border: 0;
+                background-color: $text-placeholder;
+                color: $white !important;
+            }
+
+            .chevron {
+                border: 20px solid transparent;
+                border-left: 14px solid #d4d4d4;
+                border-right: 0;
+                display: block;
+                position: absolute;
+                right: -14px;
+                top: 0;
+                z-index: 1;
+
+                &:before {
+                    border: 20px solid transparent;
+                    border-left: 14px solid $bg-body !important;
+                    border-right: 0;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 1px;
+                    top: -20px;
+                }
+            }
+        }
+
+        &:last-child {
+            .chevron {
+                display: none;
+            }
+        }
+
+        li.active {
+            background-color: transparent;
+
+            &:before {
+                display: none;
+            }
+
+            .step {
+                background-color: $light-blue !important;
+                color: $white !important;
+            }
+        }
+    }
+}
+
+.dataTables_paginate {
+    .dropup {
+        margin-bottom: 0;
+        padding: 0 !important;
+
+        .btn {
+            height: 30px !important;
+            border-color: $border-color !important;
+            margin: 0 !important;
+            position: static !important;
+            top: inherit !important;
+            box-shadow: none !important;
+        }
+
+        .dropdown-menu {
+            min-width: inherit !important;
+            width: 100%;
+
+            li {
+                a {
+                    padding: 6px 10px !important;
+                    color: $text-input !important;
+                    text-align: center !important;
+
+                    &:hover,
+                    &:focus {
+                        color: $text-input !important;
+                        background: $bg-body !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .txt-np-custom {
+        padding: 0 10px !important;
+
+        .txtNumberOfPageCustom {
+            height: 30px;
+            border-color: $border-color !important;
+            margin: 0 !important;
+        }
+    }
+
+    .pagination {
+        margin: 0 !important;
+
+        li {
+            a {
+                height: 30px;
+                width: 30px;
+                border-color: $border-color !important;
+                margin: 0 0 0 -1px !important;
+                padding: 0 !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $text-input !important;
+
+                &:hover,
+                &:focus {
+                    border-color: $border-color !important;
+                }
+            }
+        }
+
+        li.active {
+            a {
+                background-color: $medium-blue !important;
+                border-color: $medium-blue !important;
+                color: white !important;
+            }
+        }
+    }
+}
+/**/
+.ui-dialog.ui-widget-content {
+    padding-bottom: 0 !important;
+}
+.form-horizontal .form-group {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.dialog_content_footer {
+    background: $bg-body !important;
+    div[class="col-lg-offset-4 col-lg-8"] {
+        text-align: right !important;
+    }
+    div[class="col-lg-offset-2 col-lg-10"] {
+        text-align: right !important;
+        padding-right: 25px;
+    }
+    div[class="col-lg-offset-3 col-lg-9"] {
+        text-align: right !important;
+        padding-right: 25px;
+    }
+}
+.form-group.dialog_content_footer {
+    margin-bottom: 0;
+}
+form .form-group > div[class*="col-"] {
+    margin-bottom: 15px;
+}
+.ui-dialog_body--content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    label.control-label {
+        margin-right: 15px;
+        flex: 1;
+    }
+    .password_input {
+        flex: 2;
+    }
+}
+
+.modal-header {
+    background-color: #0094dc !important;
+    .modal-title {
+        color: white !important;
+        font-size: 18px;
+        font-weight: 400 !important;
+    }
+}
+button.btn.btn-primary.quickTree {
+    background-color: #0094dc !important;
+    color: #fff !important;
+    border: 0 !important;
+    outline: 0 !important;
+}

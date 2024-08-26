@@ -1,0 +1,126 @@
+/* Actions Dropdown */
+.box_actions_dropdown {
+    position: relative;
+    padding-top: 7px;
+}
+
+.box_actions_dropdown--arrow {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: block;
+    width: 15px;
+    height: 7px;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    &::before {
+        top: 0;
+        border-width: 0 .5rem .5rem .5rem;
+        border-bottom-color: $border-color;
+    }
+
+    &::after {
+        top: 1px;
+        border-width: 0 .5rem .5rem .5rem;
+    }
+}
+
+.actions_dropdown__list--icon {
+    background: $white;
+    border: 1px solid $border-color;
+    box-shadow: $box-shadow-popup;
+    border-radius: 0 0 12px 12px;
+    padding: 12px 0px;
+    width: max-content;
+
+    li {
+        display: block;
+        padding: 0 15px;
+
+        button,
+        input,
+        a {
+            display: block;
+            position: relative;
+            padding: 5px 0px 5px 25px;
+            font-size: $font-size-base;
+            font-weight: 400;
+            color: $black;
+            cursor: pointer;
+
+            span {
+                color: $heavy-blue;
+                font-size: $font-size-icon-1;
+                display: inline-block;
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+
+        &:hover {
+            background-color: $heavy-blue;
+
+            button,
+            input,
+            a {
+                color: $white;
+
+                span {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+._main--filter {
+    .dropdown {
+
+        .dropdown-menu {
+            border: 1px solid #ccc !important;
+            margin-top: -1px !important;
+            min-width: unset;
+            width: 100%;
+
+            a {
+                padding-left: 8px;
+            }
+
+            .fa {
+                visibility: hidden;
+            }
+
+            .selected .fa {
+                visibility: visible;
+            }
+        }
+
+        &.open .dropdown-toggle {
+            border-bottom-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+        }
+    }
+}

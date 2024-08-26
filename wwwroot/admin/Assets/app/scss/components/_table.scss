@@ -1,0 +1,19 @@
+#TblChannels td .label {
+    display: block;
+    margin-right: 0;
+}
+
+.dataTables_wrapper {
+    .over_auto {
+        z-index: 1;
+
+        &.ps-active-y {
+            > table th {
+                position: sticky;
+                top: 0;
+                box-shadow: 0 0 0 1px #bcdff1;
+                z-index: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+//Màn hình chiều ngang cho tablet (VD: iPad), hoặc chiều dọc cho tablet lớn (VD iPad Pro)
+@media (max-width: 1024px  ) {
+    .ilogo {
+        background-size: 80% auto;
+        width: 8rem;
+    }
+    .navbar .navbar-container .navbar-container-left .navbar-header {
+        min-width: auto !important;
+    }
+}
+
+//Màn hình chiều dọc cho tablet (VD: iPad)
+@media (max-width: 767px  ) {
+    
+}
+
+//Màn hình chiều ngang cho smartphone vừa
+@media (max-width: 639px  ) {
+    
+}
+
+//Màn hình chiều ngang cho smartphone nhỏ
+@media (max-width: 479px ) {
+    .navbar-container-left .nav-cat .title-header-page {
+        display: none;
+    }
+}
+
+@media (max-width: 321px ) { 
+    
+}

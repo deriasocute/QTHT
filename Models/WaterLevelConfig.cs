@@ -5,5 +5,6 @@
         public int ID { get; set; }
         public int IdStation { get; set; }
         public bool State { get; set; }
+        public DateTime Realtime { get; set; } = DateTime.Now;
     }
 }

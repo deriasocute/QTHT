@@ -1,0 +1,7 @@
+.dropdown-menu {
+    &.dropdown-blue {
+        > li > a {
+            border: none;
+        }
+    }
+}

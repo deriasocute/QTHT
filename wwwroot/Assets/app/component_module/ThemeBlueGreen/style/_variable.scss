@@ -1,0 +1,31 @@
+//default
+$Header-notifi: #0891B2;//Màu background của Header thông báo
+$Header-notifi-active: #06B6D4;  //Màu background của Header thông báo khi chọn
+
+//Header color  
+$bg-header: linear-gradient(90deg, #0891B2 0%, #06B6D4 100%); //Màu backgroud của Header
+$white: #fff !default;
+$font-size-base: 14px !default;
+$Header-dropdown-menu: #94a3b8 !default;
+$Header-text-body: #fff !default; //Màu text của Header
+$Header-light-blue: #08acfb !default;
+$Header-bg-badge: #374151; //Màu background badge thông báo
+$black: #000;
+$Header-text-disabled: #6c757d !default;
+$Header-text-input: #333333 !default;
+$height-header: 46px;
+    //notifi
+
+
+//layout color 
+$Layout-bg-body: url('image/bg_viettel_idc.jpg');
+
+
+//menu-left color
+$Menu-bg-body: #F9FAFB !default;
+$Menu-height-header-page: 46px !default;
+$Menu-text-active: #2193B0 !default;
+$Menu-text-input: #333333 !default;
+$Menu-text-placeholder: #939ba2 !default;
+$Menu-text-body: #4B5563 !default;
+$Menu-bg-button: #0891B2 !default; //Màu background color button Menu-left

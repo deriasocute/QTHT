@@ -1,0 +1,285 @@
+/* Main */
+
+.ce-org-chart {
+    position: relative;
+    height: 100vh;
+}
+
+.ce-org-chart[data-bg="ce-org"],
+.ce-org-chart[data-bg="ce-org"] .orgchart {
+    background: #fff;
+}
+
+.ce-org-chart[data-bg="ce-kpi"],
+.ce-org-chart[data-bg="ce-kpi"] .orgchart {
+    background: #eef0f8;
+}
+
+.orgchart .node .edge:before {
+    display: none;
+}
+
+.orgchart .node .bottomEdge:after,
+.orgchart .node .bottomEdge:before {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border-radius: 9999px;
+    left: 50%;
+    bottom: -4px !important;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all .25s;
+}
+
+.orgchart .node .bottomEdge:after {
+    content: "";
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #E4E6EF;
+    z-index: 2;
+}
+
+.orgchart .node .bottomEdge:before {
+    content: "-";
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #33336c;
+    border: 0 !important;
+}
+
+.orgchart .hierarchy.isChildrenCollapsed>.node .bottomEdge:before {
+    content: "+";
+}
+
+.orgchart .node .bottomEdge:hover:before {
+    color: #e27a78;
+}
+
+.orgchart .node .bottomEdge:hover:after {
+    border-color: #e27a78;
+}
+
+.orgchart .hierarchy {
+    text-align: center;
+}
+
+.ce-org-chart {
+    text-align: center;
+}
+
+
+/* Sơ đồ tổ chức */
+
+.ce-org {
+    border: 1px solid #E4E6EF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ce-org-title {
+    background-color: #F3F6F9;
+    padding: 6px 12px;
+    display: block;
+}
+
+.ce-org-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #fff;
+}
+
+.ce-org-logo {
+    margin-right: 18px;
+}
+
+.ce-org-logo img {
+    height: 30px;
+    width: 60px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.ce-org-members {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.ce-org-members-inner:not(:first-child) {
+    margin-left: 4px;
+}
+
+.ce-org-members-inner.pending-show {
+    display: none;
+}
+
+.ce-org-member {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ce-org-member img {
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ce-member-tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.ce-member-name {
+    font-weight: bold;
+}
+
+.ce-org-chart.non-x-collapsable .horizontalEdge {
+    display: none;
+}
+
+.ce-org-chart.non-t-collapsable .verticalEdge.topEdge {
+    display: none;
+}
+
+.ce-org-members-toggle .ce-org-members-count {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: #444;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #E4E6EF;
+    transition: all .25s;
+}
+
+.ce-org-members-toggle .ce-org-member:hover .ce-org-members-count {
+    color: #3d9cff;
+    border-color: #96cdff;
+}
+
+.ce-org-members-toggle .ce-org-member {
+    text-decoration: none;
+}
+
+.ce-member-popup-info {
+    display: none;
+}
+
+.ce-org-popup-members {
+    counter-reset: memberNum;
+}
+
+.ce-org-popup-members .ce-org-members-inner a:before {
+    counter-increment: memberNum;
+    content: counter(memberNum);
+    margin-right: 12px;
+    font-size: 14px;
+    color: #7E8299;
+}
+
+
+/* popup */
+
+.ce-org-popup-members .ce-org-members-toggle {
+    display: none;
+}
+
+.ce-org-popup-members .ce-org-members-inner.pending-show {
+    display: block;
+}
+
+.ce-org-popup-members .ce-org-members-inner {
+    margin-left: 0;
+}
+
+.ce-org-popup-members .ce-org-members-inner:first-child {
+    margin-top: 0;
+}
+
+.ce-org-popup-members .ce-org-member {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.ce-org-popup-members .ce-member-popup-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ce-org-popup-members .ce-org-member img {
+    width: 52px;
+    height: 52px;
+}
+
+.ce-org-popup-members .ce-member-popup-info .ce-member-name {
+    color: var(--gray-dark);
+    font-size: 15px;
+}
+
+.ce-org-popup-members .ce-member-popup-info .ce-member-name,
+.ce-org-popup-members .ce-member-popup-info .ce-member-position,
+.ce-org-popup-members .ce-member-popup-info .ce-member-title {
+    line-height: 1.4;
+    display: block;
+}
+
+.ce-org-popup-members .ce-member-popup-info .ce-member-position,
+.ce-org-popup-members .ce-member-popup-info .ce-member-title {
+    font-size: 14px;
+}
+
+.ce-org-popup-members .ce-org-members-inner {
+    margin-left: 0;
+}
+
+#ModalDeptMembers .modal-body {
+    padding: 0;
+}
+
+.ce-org-popup-members .ce-org-member:hover {
+    background-color: #f5faff;
+}
+
+.ce-org-popup-members .ce-org-member {
+    padding: 12px 22px;
+    border-top: 1px solid #dee2e6;
+}
+
+.ce-org-popup-members .ce-org-members-inner:first-child .ce-org-member {
+    border-top: 0;
+}
+
+
+/* kpi */
+
+.ce-kpi {
+    background: #fff;
+    box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%);
+    padding: 14px;
+    min-width: 125px;
+}
+
+.ce-kpi.bg-primary {
+    color: #fff;
+}

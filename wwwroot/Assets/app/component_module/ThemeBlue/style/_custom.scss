@@ -1,0 +1,23 @@
+body.body-dashboard::before {
+    display: none;
+}
+.select-cus .select2-choices, .select-cus .select2-choice {
+    background: rgb(209 209 209 / 60%);   
+}
+table.table.table-transparent thead th {
+    background-color: rgb(181 181 181 / 40%) !important;
+}
+
+// .page_block .page_block-title .todo-list-item.active {
+//     border-bottom: 2px solid $Header-notifi-active;
+//     border-radius: 0px;
+//     color: $Header-notifi-active;
+//     background-color: transparent;
+//     span {
+//         color: $Header-notifi-active;
+//     }
+//     .btn-count-outline {
+//         border: 1px solid  $Header-notifi-active;
+//         color:  $Header-notifi-active;
+//     }
+// }

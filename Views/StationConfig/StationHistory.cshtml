@@ -1,0 +1,85 @@
+﻿@model QTHT.Models.View.StationConfigModel
+@{
+    var stationConfig = Model.StationConfig;
+    var statusHistory = Model.StatusHistories;
+    Dictionary<int, string> list = QTHT.Enums.EnumStatus.GetDescribes<QTHT.Enums.EnumStatus.StationStatus>();
+    List<Sensor> listSensor = ViewBag.ListSensor;
+}
+<div class="table-responsive over_auto">
+    <table id="StationConfig" class="table table-bordered table-hover table-striped dataTable" role="grid" aria-describedby="searchable_info">
+        <thead>
+            <tr role="row">
+                <th class="wpx60 center" tabindex="0">STT</th>
+                <th class="wpx400 " tabindex="0">Mã điều khiển</th>
+                <th class="wpx200 center" tabindex="0" aria-controls="searchable">Lưu lượng nước</th>
+                <th class="wpx200 center" tabindex="0" aria-controls="searchable">Dòng điện tiêu thụ</th>
+                <th class="wpx200 center" tabindex="0" aria-controls="searchable">Trạng thái máy bơm</th>
+                <th class="wauto" tabindex="0" aria-controls="searchable">Thời gian</th>
+                @*<th class="wpx150 txtct" tabindex="0" aria-controls="searchable">Thao tác</th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @if(statusHistory.Count > 0){
+                var stt = 0;
+                foreach (var item in statusHistory.OrderByDescending(p => p.TimestampMessage))
+                {
+                    stt++;
+                    <tr class="h-55px" role="row">
+                        <td class="sorting_1 center">@stt</td>
+                        <td>@item.ESP8266ID</td>
+                        @{
+                            var sensorFlow = listSensor.Where(n => n.SensorType == "Lưu lượng").FirstOrDefault();
+                            var valueFlow = item.SensorValues.Where(n => n.SensorID == sensorFlow.ID).FirstOrDefault();
+                            <td class="center">@valueFlow.Value</td>
+                        }
+                        @{
+                            var sensorCurrent = listSensor.Where(n => n.SensorType == "Dòng điện").FirstOrDefault();
+                            var valueCurrent = item.SensorValues.Where(n => n.SensorID == sensorCurrent.ID).FirstOrDefault();
+                            <td class="center">@valueCurrent.Value</td>
+                        }
+                        @{
+                            if(valueFlow.Value < 1 && valueCurrent.Value < 0.03)
+                            {
+                                <td class="center">
+                                    <span class="tags-status tag-blue">Không hoạt động</span>
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="center">
+                                    <span class="tags-status tag-green">Đang hoạt động</span>
+                                </td>
+                            }
+                        }
+                        @*<td class="center">
+                        @switch (item.PumpStatus ? 1 : 0)
+                                {
+                                    case (int)QTHT.Enums.EnumStatus.PumpStatus.Working:
+                                        <span class="tags-status tag-green">Đang hoạt động</span>break;
+                                    case (int)QTHT.Enums.EnumStatus.PumpStatus.NotWork:
+                                        <span class="tags-status tag-blue">Không hoạt động</span>break;
+                                }</td>
+                        <td class="center">@switch (item.WaterLevelStatus ? 1 : 0)
+                                {
+                                    case (int)QTHT.Enums.EnumStatus.WaterLevelStatus.Full:
+                                        <span class="badges-status badge-red-light">Bể chứa đầy</span>break;
+                                    case (int)QTHT.Enums.EnumStatus.WaterLevelStatus.NotFull:
+                                        <span class="badges-status badge-yellow-light">Bể chứa chưa đầy</span>break;
+                                }</td>
+                        *@
+                        <td>@String.Format("{0:yyyy-MM-dd HH:mm}", item.TimestampMessage)</td>
+                        @*<td>
+                            
+                            <button type="button" class="btn btn-info btn-xs edit quickUpdate" data-toggle="ajax-modal" data-target="@("editUser-"+item.ID)" data-url="@Url.Action("Edit")/@item.ID">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xs quickDelete" data-toggle="ajax-modal" data-target="@("deleteUser-"+item.ID)" data-url="@Url.Action("Delete")/@item.ID">
+                            <i class="fa fa-trash-o"></i>
+                            </button>
+                        </td>*@
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
